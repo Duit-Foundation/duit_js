@@ -10,7 +10,7 @@ export class DuitLeafElement {
   protected action: Nullable<BaseAction>;
 
   constructor(id?: string, action?: Nullable<BaseAction>, controlled?: boolean) {
-    this.controlled = controlled ?? action !== undefined ?? false;
+    this.controlled = controlled ?? false;
     this.action = action;
     if (id) {
       this.id = id;

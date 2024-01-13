@@ -1,13 +1,13 @@
 const http = require("http");
 const express = require("express");
 const WebSocket = require("ws");
-const { DuitView, DuitElementType, ColoredBoxUiElement, UpdateEvent, CustomTreeElement, LayoutUpdateEvent } = require("duit_js");
+const { DuitView, DuitElementType, ColoredBoxUiElement, UpdateEvent, LayoutUpdateEvent, SemanticBlockDescription, Column, Ref, Text} = require("duit_js");
 const { WebSocketAction } = require("duit_js");
 const { SizedBoxUiElement } = require("duit_js");
 const { TextUiElement } = require("duit_js");
 const { CenterUiElement } = require("duit_js");
 const { RowUiElement } = require("duit_js");
-const { ElevatedButtonUiElement } = require("duit_js");
+const { ElevatedButtonUiElement, Row, Container } = require("duit_js");
 const bodyParser = require("body-parser");
 const decoreatedBoxExample = require("./src/dec_box_ex");
 const inputs = require("./src/inputs");
@@ -17,15 +17,11 @@ const { layoutUpdate, layoutUpdateEventPayload } = require("./src/update_layout"
 const gestureExample = require("./src/gesture");
 const transfromExample = require("./src/transfrom");
 const richTextExample = require("./src/rich_text_example");
+const {componentExample, someBlock} = require("./src/component_example");
 
 const app = express();
 
-class ExampleCustomWidget extends CustomTreeElement {
 
-   constructor(attrs, tag, id, action, controlled) {
-      super(attrs, tag, id, action, controlled);
-   }
-}
 
 app.use(bodyParser.json())
 
@@ -34,6 +30,7 @@ const router = new express.Router();
 router.get("/decoratedbox", function (req, res) {
    console.log("request decoratedbox")
    const layout = decoreatedBoxExample();
+   console.log(layout);
    res.status(200).send(layout);
 });
 
@@ -114,6 +111,26 @@ router.get("/transform", function (req, res) {
 router.get("/rich", function (req, res) {
    const layout = richTextExample();
    res.status(200).send(layout);
+});
+
+router.get("/shoes", function (req, res) {
+   const layout = componentExample();
+   res.status(200).send(layout);
+});
+
+let cost = 150;
+router.get("/send_component_update", function (req, res) {
+   const update = new UpdateEvent(
+      {
+         "shoes_card1": {
+            "image": "https://resizer.mail.ru/p/b0685008-5021-5715-a506-e73621c958f5/AQAFGR6McYd06E2eQ8J-GzknNO9eDHZcCIpgrre-K3SwrZ0QnmOBQVPyD6yWisBlYJYZ38YEM768jMY1M4m4NYbQkmM.jpg",
+            "description": "Топовые и дорогие",
+            "primary": "Ботильоны",
+            "cost": `$${cost++}`,
+        },
+      }
+   )
+   res.status(200).send(update);
 });
 
 app.use(router);

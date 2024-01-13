@@ -1,4 +1,4 @@
-const { DuitView, DuitElementType, ImageUiElement, EmptyUiElement, TextUiElement } = require("duit_js");
+const { DuitView, DuitElementType, ImageUiElement, EmptyUiElement, TextUiElement, CustomTreeElement } = require("duit_js");
 const { readFileSync } = require("fs");
 
 class ExampleCustomWidget extends CustomTreeElement {

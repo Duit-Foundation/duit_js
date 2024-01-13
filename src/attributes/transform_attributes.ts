@@ -2,6 +2,7 @@ import type { Alignment } from "./properties/alignment";
 import type { FilterQuality } from "./properties/filter_quality";
 import type { Offset } from "./properties/offset";
 import type { TransformType } from "./properties/transform_type";
+import type { ValueReferenceHolder } from "./value_reference_holder";
 
 class TransfromBase {
     origin?: Offset;
@@ -38,7 +39,7 @@ type Transfroms = {
 
 type InferTransfrom<T extends keyof typeof TransformType> = Transfroms[T]
 
-export interface TransformAttributes<T extends keyof typeof TransformType = "scale"> {
+export interface TransformAttributes<T extends keyof typeof TransformType = "scale"> extends ValueReferenceHolder<InferTransfrom<T>> {
     type: T;
     data: InferTransfrom<T>
 }

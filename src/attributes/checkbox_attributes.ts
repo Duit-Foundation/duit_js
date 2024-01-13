@@ -1,9 +1,10 @@
 import type { Color } from "../utils/color";
+import type { ValueReferenceHolder } from "./value_reference_holder";
 import type { BorderSide } from "./properties/border";
 import type { MaterialStateProperty } from "./properties/material_state";
 import type { VisualDensity } from "./properties/visual_density";
 
-export interface CheckboxAttributes {
+export interface CheckboxAttributes extends ValueReferenceHolder<CheckboxAttributes> {
     value: boolean;
     autofocus?: boolean;
     isError?: boolean;

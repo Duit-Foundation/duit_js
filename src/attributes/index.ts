@@ -18,4 +18,5 @@ export { StackAttributes } from "./stack_attributes";
 export { RichTextAttributes } from "./rich_text_attributes";
 export { WrapAttributes } from "./wrap_attributes";
 export { LifecycleEventListenerAttributes } from "./lifecycle_event_listener_attributes";
-export  * from "./properties/index";
+export { Ref, ValueReferenceHolder } from "./value_reference_holder";
+export * from "./properties/index";

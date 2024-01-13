@@ -1,8 +1,9 @@
 import type { BaseAction } from "../lib/action";
 import type { DragStartBehavior } from "./properties/drag_start_behavior";
 import type { HitTestBehavior } from "./properties/hit_test_behavior";
+import type { ValueReferenceHolder } from "./value_reference_holder";
 
-export interface GestureDetectorAttributes {
+export interface GestureDetectorAttributes extends ValueReferenceHolder<GestureDetectorAttributes> {
     onTap?: BaseAction;
     onTapDown?: BaseAction;
     onTapUp?: BaseAction;

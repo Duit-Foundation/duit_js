@@ -8,8 +8,9 @@ import type { TextScaler } from "./properties/text_scaler";
 import type { TextSpan } from "./properties/text_span";
 import type { TextStyle } from "./properties/text_style";
 import type { TextWidghtBasis } from "./properties/text_wigth_basis";
+import type { ValueReferenceHolder } from "./value_reference_holder";
 
-export interface RichTextAttributes {
+export interface RichTextAttributes extends ValueReferenceHolder<RichTextAttributes> {
     textSpan?: TextSpan;
     style?: TextStyle;
     textAlign?: keyof typeof TextAlign;

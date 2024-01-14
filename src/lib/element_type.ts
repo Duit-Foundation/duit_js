@@ -23,6 +23,7 @@ enum DuitElementType {
   richText = "RichText",
   wrap = "Wrap",
   lifecycleEventListener = "LifecycleEventListener",
+  component = "Component",
 }
 
 export default DuitElementType;

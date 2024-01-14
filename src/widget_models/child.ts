@@ -1,8 +1,9 @@
 import { randomUUID } from "crypto";
-import { DuitElement } from "../lib/element";
-import { Nullable } from "../utils/nullable";
-import { ID } from "../utils/id";
-import { BaseAction } from "../lib/action";
+
+import type { DuitElement } from "../lib/element";
+import type { Nullable } from "../utils/nullable";
+import type { ID } from "../utils/id";
+import type { BaseAction } from "../lib/action";
 
 export class DuitLeafElement {
   protected id: ID;
@@ -21,7 +22,7 @@ export class DuitLeafElement {
 }
 
 export class SingleChildLayout extends DuitLeafElement {
-  protected child: Nullable<DuitElement>;
+  child: Nullable<DuitElement>;
 
   constructor(id?: string, action?: Nullable<BaseAction>, controlled?: boolean) {
     super(id, action, controlled);
@@ -41,7 +42,7 @@ export class SingleChildLayout extends DuitLeafElement {
 }
 
 export class MultiChildLayout extends DuitLeafElement {
-  protected children: Nullable<DuitElement[]> = [];
+  children: Nullable<DuitElement[]> = [];
 
   constructor(id?: string, action?: Nullable<BaseAction>, controlled?: boolean) {
     super(id, action, controlled);

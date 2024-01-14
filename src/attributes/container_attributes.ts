@@ -4,8 +4,9 @@ import type { Alignment } from "./properties/alignment"
 import type { BoxConstraints } from "./properties/box_constraits"
 import type { Clip } from "./properties/clip"
 import type { BoxDecoration } from "./properties/decoration"
+import type { ValueReferenceHolder } from "./value_reference_holder"
 
-export interface ContainerAttributes {
+export interface ContainerAttributes extends ValueReferenceHolder<ContainerAttributes> {
     constraints?: BoxConstraints
     padding?: EdgeInsets
     margin?: EdgeInsets

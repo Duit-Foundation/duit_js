@@ -3,8 +3,9 @@ import type { Clip } from "./properties/clip";
 import type { TextDirection } from "./properties/text_direction";
 import type { VerticalDirection } from "./properties/vertical_direction";
 import type { WrapAlignment, WrapCrossAlignment } from "./properties/wrap_alignment";
+import type { ValueReferenceHolder } from "./value_reference_holder";
 
-export interface WrapAttributes {
+export interface WrapAttributes extends ValueReferenceHolder<WrapAttributes> {
     clipBehavior?: keyof typeof Clip;
     textDirection?: keyof typeof TextDirection;
     verticalDirection?: keyof typeof VerticalDirection;

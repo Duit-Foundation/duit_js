@@ -3,8 +3,9 @@ import type { InputDecoration } from "./properties/input_decoration";
 import type { TextAlign } from "./properties/text_align";
 import type { TextDirection } from "./properties/text_direction";
 import type { TextStyle } from "./properties/text_style";
+import type { ValueReferenceHolder } from "./value_reference_holder";
 
-export interface TextFieldAttributes {
+export interface TextFieldAttributes extends ValueReferenceHolder<TextFieldAttributes> {
     style?: TextStyle;
     decoration?: InputDecoration;
     textAlign?: keyof typeof TextAlign;

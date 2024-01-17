@@ -1,4 +1,4 @@
-import type { Color } from "../../utils/color";
+import type { Color } from "./color";
 import type { BlurStyle } from "./blur_style";
 import type { Offset } from "./offset";
 

@@ -1,5 +1,4 @@
-import { EdgeInsets } from "../utils/insets"
-import { Axis, Clip, DragStartBehavior, ScrollPhysics, ScrollViewKeyboardDismissBehavior } from "./properties"
+import type { Axis, Clip, DragStartBehavior, ScrollPhysics, ScrollViewKeyboardDismissBehavior, EdgeInsets } from "./properties"
 
 export interface SingleChildScrollViewAttributes {
     scrollDirection?: keyof typeof Axis;

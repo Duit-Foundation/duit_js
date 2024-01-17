@@ -26,3 +26,5 @@ export * from "./text_leading_distribution";
 export * from "./transform_type";
 export * from "./physics";
 export * from "./scrollview_keyboard_dismess_behavior";
+export * from "./insets";
+export * from "./color";

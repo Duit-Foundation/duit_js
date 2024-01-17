@@ -1,5 +1,5 @@
-import type { Color } from "../utils/color"
-import type { EdgeInsets } from "../utils/insets"
+import type { Color } from "./properties/color"
+import type { EdgeInsets } from "./properties/insets"
 import type { Alignment } from "./properties/alignment"
 import type { BoxConstraints } from "./properties/box_constraits"
 import type { Clip } from "./properties/clip"

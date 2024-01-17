@@ -1,4 +1,4 @@
-import type { Color } from "../utils/color";
+import type { Color } from "./properties/color";
 import type { ValueReferenceHolder } from "./value_reference_holder";
 import type { BorderSide } from "./properties/border";
 import type { MaterialStateProperty } from "./properties/material_state";

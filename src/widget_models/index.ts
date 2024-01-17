@@ -23,3 +23,4 @@ export * from "./wrap";
 export * from "./custom";
 export * from "./lifecycle_event_listener";
 export * from "./component";
+export * from "./single_child_scrollview";

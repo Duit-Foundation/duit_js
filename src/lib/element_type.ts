@@ -24,6 +24,7 @@ enum DuitElementType {
   wrap = "Wrap",
   lifecycleEventListener = "LifecycleEventListener",
   component = "Component",
+  singleChildScrollView = "SingleChildScrollView",
 }
 
 export default DuitElementType;

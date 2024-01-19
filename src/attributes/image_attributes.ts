@@ -1,4 +1,4 @@
-import type { Color } from "../utils/color";
+import type { Color } from "./properties/color";
 import type { Alignment } from "./properties/alignment";
 import type { BlendMode } from "./properties/blend_mode";
 import type { BoxFit } from "./properties/box_fit";

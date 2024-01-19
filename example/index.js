@@ -1,13 +1,13 @@
 const http = require("http");
 const express = require("express");
 const WebSocket = require("ws");
-const { DuitView, DuitElementType, ColoredBoxUiElement, UpdateEvent, LayoutUpdateEvent, SemanticBlockDescription, Column, Ref, Text} = require("duit_js");
+const { DuitView, DuitElementType, ColoredBoxUiElement, UpdateEvent, LayoutUpdateEvent } = require("duit_js");
 const { WebSocketAction } = require("duit_js");
 const { SizedBoxUiElement } = require("duit_js");
 const { TextUiElement } = require("duit_js");
 const { CenterUiElement } = require("duit_js");
 const { RowUiElement } = require("duit_js");
-const { ElevatedButtonUiElement, Row, Container } = require("duit_js");
+const { ElevatedButtonUiElement } = require("duit_js");
 const bodyParser = require("body-parser");
 const decoreatedBoxExample = require("./src/dec_box_ex");
 const inputs = require("./src/inputs");
@@ -17,7 +17,8 @@ const { layoutUpdate, layoutUpdateEventPayload } = require("./src/update_layout"
 const gestureExample = require("./src/gesture");
 const transfromExample = require("./src/transfrom");
 const richTextExample = require("./src/rich_text_example");
-const {componentExample, someBlock} = require("./src/component_example");
+const {componentExample} = require("./src/component_example");
+const scrollviewExample = require("./src/scrollview");
 
 const app = express();
 
@@ -133,6 +134,11 @@ router.get("/send_component_update", function (req, res) {
    res.status(200).send(update);
 });
 
+router.get("/scrollview", function (req, res) {
+   const layout = scrollviewExample();
+   res.status(200).send(layout);
+});
+
 app.use(router);
 
 const server = http.createServer(app);
@@ -152,7 +158,6 @@ function createDynamicDuitView() {
    //return json string
    return builder.build();
 }
-
 
 webSocketServer.on('connection', ws => {
    ws.on('message', m => {

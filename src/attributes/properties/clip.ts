@@ -1,6 +1,6 @@
 export enum Clip {
     none = "none",
-    handEnge = "hardEnge",
+    hardEdge = "hardEdge",
     antiAlias = "antiAlias",
     antiAliasWithSaveLayer = "antiAliasWithSaveLayer",
 }

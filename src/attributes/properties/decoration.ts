@@ -1,4 +1,4 @@
-import type { Color } from "../../utils/color";
+import type { Color } from "./color";
 import type { BorderSide } from "./border";
 import type { BoxShadow } from "./box_shadow";
 import type { BoxShape } from "./box_shape";

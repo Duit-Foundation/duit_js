@@ -1,5 +1,5 @@
-import type { Color } from "../../utils/color";
-import type { EdgeInsets } from "../../utils/insets";
+import type { Color } from "./color";
+import type { EdgeInsets } from "./insets";
 import type { InputBorder } from "./input_border";
 import type { TextStyle } from "./text_style";
 

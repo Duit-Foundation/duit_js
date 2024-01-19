@@ -26,8 +26,8 @@ function imgViewExample() {
         new ImageUiElement({
             type: "network",
             src: "https://via.assets.so/game.png?id=1&q=95&w=360&h=360&fit=fill",
-            width: 350,
-            height: 350
+            width: 100,
+            height: 100
         }),
         new TextUiElement({
             data: "Asset image"
@@ -35,8 +35,8 @@ function imgViewExample() {
         new ImageUiElement({
             type: "asset",
             src: "assets/betboom.jpg",
-            width: 350,
-            height: 350
+            width: 100,
+            height: 100
         }),
         new TextUiElement({
             data: "Memory image (from bytes)"
@@ -45,8 +45,8 @@ function imgViewExample() {
             type: "memory",
             src: "",
             byteData: img,
-            width: 350,
-            height: 350
+            width: 100,
+            height: 100
         }),
         new EmptyUiElement(),
         new ExampleCustomWidget({"random": "SPECIAL TEXT IN CUSTOM WIDGET"}, "ExampleCustomWidget")

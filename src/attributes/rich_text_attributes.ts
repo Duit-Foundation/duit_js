@@ -1,4 +1,4 @@
-import type { Color } from "../utils/color";
+import type { Color } from "./properties/color";
 import type { StrutStyle } from "./properties/strut_style";
 import type { TextAlign } from "./properties/text_align";
 import type { TextDirection } from "./properties/text_direction";

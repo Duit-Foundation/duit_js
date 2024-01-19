@@ -1,4 +1,4 @@
-import type { Color } from "../../utils/color";
+import type { Color } from "./color";
 
 export enum Border {
     outline = "outline",

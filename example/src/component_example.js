@@ -1,6 +1,6 @@
-const { DuitView, SizedBox, DecoratedBox, Padding, Row, Image, Column, Text, Ref, SemanticBlock, SemanticBlockDescription,DuitElementType, ElevatedButton, HttpAction } = require("duit_js");
+const { DuitView, SizedBox, DecoratedBox, Padding, Row, Image, Column, Text, Ref ,DuitElementType, ElevatedButton, HttpAction, Component, ComponentDescription } = require("duit_js");
 
-function someBlock() {
+function exampleBlock() {
     const layout = DecoratedBox({
         attributes: {
             decoration: {
@@ -72,7 +72,7 @@ function someBlock() {
             ])
         )
     )
-    return SemanticBlockDescription("shoes_card", layout);
+    return ComponentDescription("shoes_card", layout);
 }
 
 function componentExample() {
@@ -83,7 +83,7 @@ function componentExample() {
     root.addChildren(
         [
             SizedBox({attributes: {height: 24}}),
-        SemanticBlock({
+        Component({
             data: {
                 "image": "https://resizer.mail.ru/p/b0685008-5021-5715-a506-e73621c958f5/AQAFGR6McYd06E2eQ8J-GzknNO9eDHZcCIpgrre-K3SwrZ0QnmOBQVPyD6yWisBlYJYZ38YEM768jMY1M4m4NYbQkmM.jpg",
                 "primary": "Лабутены",
@@ -94,7 +94,7 @@ function componentExample() {
             id: "shoes_card1",
         }),
         SizedBox({attributes: {height: 24}}),
-        SemanticBlock({
+        Component({
             data: {
                 "image": "https://ae04.alicdn.com/kf/A1255f8c200964840b940a3c7537ab567g.jpeg",
                 "primary": "Найки",
@@ -105,7 +105,7 @@ function componentExample() {
             id: "shoes_card2",
         }),
         SizedBox({attributes: {height: 24}}),
-        SemanticBlock({
+        Component({
             data: {
                 "image": "https://static.lichi.com/product/44640/9d56d4435e5bc814b979c2ebcffdb9b7.jpg?v=0_44640.0&resize=size-middle",
                 "primary": "Туфельки",
@@ -123,4 +123,4 @@ function componentExample() {
     return builder.build();
 }
 
-module.exports = {componentExample, someBlock}
+module.exports = {componentExample, someBlock: exampleBlock}

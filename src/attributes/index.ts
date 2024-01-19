@@ -18,5 +18,6 @@ export { StackAttributes } from "./stack_attributes";
 export { RichTextAttributes } from "./rich_text_attributes";
 export { WrapAttributes } from "./wrap_attributes";
 export { LifecycleEventListenerAttributes } from "./lifecycle_event_listener_attributes";
+export { SingleChildScrollViewAttributes } from "./single_child_scrollview";
 export { Ref, ValueReferenceHolder } from "./value_reference_holder";
 export * from "./properties/index";

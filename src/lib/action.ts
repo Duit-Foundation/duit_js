@@ -1,6 +1,12 @@
 import { ID } from "../utils/id";
+import { ServerEvent } from "./event";
 
 type HttpMethod = "POST" | "GET" | "PATCH" | "DELETE";
+
+enum ExecutionType {
+    transport,
+    local
+}
 
 /**
  * Represents an actions dependency.
@@ -47,6 +53,7 @@ export class BaseAction {
  */
 export class HttpAction extends BaseAction {
     meta: HttpActionMetainfo;
+    executionType = ExecutionType.transport as const;
 
     constructor(event: string, meta: HttpActionMetainfo, dependsOn: ActionDependency[] = []) {
         super(event, dependsOn);
@@ -60,7 +67,17 @@ export class HttpAction extends BaseAction {
  * @extends BaseAction
  */
 export class WebSocketAction extends BaseAction {
+    executionType = ExecutionType.transport as const;
     constructor(event: string, dependsOn: ActionDependency[] = []) {
         super(event, dependsOn);
+    }
+}
+
+export class LocalExecutedAction extends BaseAction {
+    executionType = ExecutionType.local as const;
+    payload: ServerEvent;
+    constructor(payload: ServerEvent) {
+        super("local_event", []);
+        this.payload = payload;
     }
 }

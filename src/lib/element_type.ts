@@ -25,6 +25,8 @@ enum DuitElementType {
   lifecycleEventListener = "LifecycleEventListener",
   component = "Component",
   singleChildScrollView = "SingleChildScrollView",
+  radio = "Radio",
+  radioGroupContext = "RadioGroupContext",
 }
 
 export default DuitElementType;

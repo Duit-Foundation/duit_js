@@ -9,8 +9,8 @@ export class RadioUiElement extends DuitLeafElement {
   type = DuitElementType.radio as const;
   attributes: RadioAttributes;
 
-  constructor(attrs: RadioAttributes, id?: string) {
-    super(id, null, true);
+  constructor(attrs: RadioAttributes, id?: string, controlled?: boolean) {
+    super(id, null, controlled);
     this.attributes = attrs;
   }
 }
@@ -26,7 +26,7 @@ export class RadioGroupContextUiElement extends SingleChildLayout {
 } 
 
 export const Radio = (props: BaseProps<RadioAttributes>): RadioUiElement => {
-  return new RadioUiElement(props.attributes, props.id);
+  return new RadioUiElement(props.attributes, props.id, props.controlled);
 }
 
 export const RadioGroupContext = (props: PropsWithAction<RadioGroupContextAttributes>): RadioGroupContextUiElement => {

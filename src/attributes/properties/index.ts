@@ -28,3 +28,4 @@ export * from "./physics";
 export * from "./scrollview_keyboard_dismess_behavior";
 export * from "./insets";
 export * from "./color";
+export * from "./mateatial_tap_target_size";

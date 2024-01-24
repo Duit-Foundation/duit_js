@@ -1,4 +1,4 @@
-const { SizedBoxUiElement } = require("duit_js");
+const { SizedBoxUiElement, Radio, Padding, Container, Row, GestureDetector, EdgeInsetsUtils, LocalExecutedAction, UpdateEvent, NavigationEvent, Column, RadioGroupContext } = require("duit_js");
 const { PaddingUiElement } = require("duit_js");
 const { CheckBoxUiElement } = require("duit_js");
 const { RowUiElement } = require("duit_js");
@@ -73,8 +73,82 @@ function inputExample() {
                 {
                     id: "checkBox1",
                     target: "checkbox"
+                },
+                {
+                    id: "radioGroup1",
+                    target: "radio"
                 }
             ])).addChild(new TextUiElement({data: "ElevatedButton"})),
+            Padding({
+                attributes: {
+                    padding: EdgeInsetsUtils.all(12)
+                }
+            }).addChild(
+                GestureDetector({
+                    attributes: {
+                        behavior: "opaque",
+                    }
+                }
+                ).addChild(
+                    Container({
+                        attributes: {
+                            decoration: {
+                                color: "#DCDCDC",
+                                borderRadius: 12,
+                                border: {
+                                    color: "#fcba03",
+                                    width: 1.25,
+                                }
+                            }
+                        }
+                    }).addChild(
+                        RadioGroupContext({
+                            attributes: {
+                                groupValue: "2",
+                            }, id: "radioGroup1",
+                        }).addChild(
+                            Column({}).addChildren([
+                                Row({
+                                    attributes: {
+                                        mainAxisAlignment: "spaceEvenly"
+                                    }
+                                }).addChildren([
+                                    Radio({attributes: {
+                                        value: "1",
+                                        splashRadius: 12,
+                                        toggleable: true,
+                                    }}),
+                                    new TextUiElement({data: "Toggle radio button 1"})
+                                ]),
+                                Row({
+                                    attributes: {
+                                        mainAxisAlignment: "spaceEvenly"
+                                    }
+                                }).addChildren([
+                                    Radio({attributes: {
+                                        value: "2",
+                                        splashRadius: 24,
+                                        toggleable: true,
+                                    }}),
+                                    new TextUiElement({data: "Toggle radio button 2"})
+                                ]),
+                                Row({
+                                    attributes: {
+                                        mainAxisAlignment: "spaceEvenly"
+                                    }
+                                }).addChildren([
+                                    Radio({attributes: {
+                                        value: "3",
+                                        splashRadius: 36,
+                                        toggleable: true,
+                                    }}),
+                                    new TextUiElement({data: "Toggle radio button 3"})
+                                ])
+                            ])
+                        )
+                    )
+                )
+            ),
             new SizedBoxUiElement({height: 24}),
             new TextUiElement({data: ""}, "text1", null, true),
             new TextUiElement({data: ""}, "text2", null, true),

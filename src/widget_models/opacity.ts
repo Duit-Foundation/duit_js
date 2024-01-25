@@ -5,7 +5,7 @@ import type { OpacityAttributes } from "../attributes";
 import type { BaseProps } from "./props";
 
 export class OpacityUiElement extends SingleChildLayout {
-  type = DuitElementType.align as const;
+  type = DuitElementType.opacity as const;
   attributes: OpacityAttributes;
 
   constructor(attrs: OpacityAttributes, id?: string, controlled?: boolean) {

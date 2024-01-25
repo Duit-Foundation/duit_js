@@ -21,5 +21,6 @@ export { LifecycleEventListenerAttributes } from "./lifecycle_event_listener_att
 export { SingleChildScrollViewAttributes } from "./single_child_scrollview";
 export { RadioAttributes, RadioGroupContextAttributes } from "./radio_attributes";
 export { OpacityAttributes } from "./opacity_attributes";
+export { IgnorePointerAttributes } from "./ignore_pointer_attributes";
 export { Ref, ValueReferenceHolder } from "./value_reference_holder";
 export * from "./properties/index";

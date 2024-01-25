@@ -27,6 +27,7 @@ enum DuitElementType {
   singleChildScrollView = "SingleChildScrollView",
   radio = "Radio",
   radioGroupContext = "RadioGroupContext",
+  opacity = "Opacity",
   ignorePointer = "IgnorePointer",
 }
 

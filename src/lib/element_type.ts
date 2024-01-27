@@ -29,6 +29,7 @@ enum DuitElementType {
   radioGroupContext = "RadioGroupContext",
   opacity = "Opacity",
   ignorePointer = "IgnorePointer",
+  slider = "Slider",
 }
 
 export default DuitElementType;

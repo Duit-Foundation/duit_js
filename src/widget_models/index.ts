@@ -27,3 +27,4 @@ export * from "./single_child_scrollview";
 export * from "./radio";
 export * from "./opacity";
 export * from "./ignore_pointer";
+export * from "./slider";

@@ -1,4 +1,4 @@
-import { CenterUiElement, CheckBoxUiElement, ColoredBoxUiElement, ColumnUiElement, ContainerUiElement, DecoratedBoxUiElement, ExpandedUiElement, GestureDetectorUiElement, ImageUiElement, LifecycleEventListenerUiElement, PaddingUiElement, PositionedUiElement, RichTextUiElement, RowUiElement, ComponentUiElement, SizedBoxUiElement, StackUiElement, TextFieldUiElement, TextUiElement, WrapUiElement, RadioUiElement, RadioGroupContextUiElement, SingleChildScrollViewUiElement, OpacityUiElement, IgnorePoinerUiElement } from "../widget_models";
+import { CenterUiElement, CheckBoxUiElement, ColoredBoxUiElement, ColumnUiElement, ContainerUiElement, DecoratedBoxUiElement, ExpandedUiElement, GestureDetectorUiElement, ImageUiElement, LifecycleEventListenerUiElement, PaddingUiElement, PositionedUiElement, RichTextUiElement, RowUiElement, ComponentUiElement, SizedBoxUiElement, StackUiElement, TextFieldUiElement, TextUiElement, WrapUiElement, RadioUiElement, RadioGroupContextUiElement, SingleChildScrollViewUiElement, OpacityUiElement, IgnorePoinerUiElement, SliderUiElement } from "../widget_models";
 
 export type DuitLayoutElement =
     ColumnUiElement
@@ -24,6 +24,7 @@ export type DuitLayoutElement =
 export type DuitElement =
     TextUiElement
     | RadioUiElement
+    | SliderUiElement
     | CheckBoxUiElement
     | TextFieldUiElement
     | ImageUiElement

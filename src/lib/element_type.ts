@@ -30,6 +30,7 @@ enum DuitElementType {
   opacity = "Opacity",
   ignorePointer = "IgnorePointer",
   slider = "Slider",
+  fittedBox = "FittedBox",
 }
 
 export default DuitElementType;

@@ -28,3 +28,4 @@ export * from "./radio";
 export * from "./opacity";
 export * from "./ignore_pointer";
 export * from "./slider";
+export * from "./fitted_box";

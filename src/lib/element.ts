@@ -1,39 +1,39 @@
-import { CenterUiElement, CheckBoxUiElement, ColoredBoxUiElement, ColumnUiElement, ContainerUiElement, DecoratedBoxUiElement, ExpandedUiElement, GestureDetectorUiElement, ImageUiElement, LifecycleEventListenerUiElement, PaddingUiElement, PositionedUiElement, RichTextUiElement, RowUiElement, ComponentUiElement, SizedBoxUiElement, StackUiElement, TextFieldUiElement, TextUiElement, WrapUiElement, RadioUiElement, RadioGroupContextUiElement, SingleChildScrollViewUiElement, OpacityUiElement, IgnorePoinerUiElement, SliderUiElement, CustomSingleChildWidget, CustomMultiChildWidget, AlignUiElement, TransformUiElement } from "../widget_models";
+import * as Widgets from "../widget_models";
 import { DuitLeafElement } from "../widget_models/child";
 
 export type DuitLayoutElement<T = any> =
-    ColumnUiElement
-    | RowUiElement
-    | ColoredBoxUiElement
-    | SizedBoxUiElement
-    | CenterUiElement
-    | StackUiElement
-    | ExpandedUiElement
-    | PaddingUiElement
-    | DecoratedBoxUiElement
-    | ContainerUiElement
-    | GestureDetectorUiElement
-    | WrapUiElement
-    | LifecycleEventListenerUiElement
-    | ComponentUiElement
-    | PositionedUiElement
-    | SingleChildScrollViewUiElement
-    | OpacityUiElement
-    | IgnorePoinerUiElement
-    | CustomSingleChildWidget<T>
-    | CustomMultiChildWidget<T>
-    | AlignUiElement
-    | TransformUiElement
-    | RadioGroupContextUiElement;
+    Widgets.ColumnUiElement
+    | Widgets.RowUiElement
+    | Widgets.ColoredBoxUiElement
+    | Widgets.SizedBoxUiElement
+    | Widgets.CenterUiElement
+    | Widgets.StackUiElement
+    | Widgets.ExpandedUiElement
+    | Widgets.PaddingUiElement
+    | Widgets.DecoratedBoxUiElement
+    | Widgets.ContainerUiElement
+    | Widgets.GestureDetectorUiElement
+    | Widgets.WrapUiElement
+    | Widgets.LifecycleEventListenerUiElement
+    | Widgets.ComponentUiElement
+    | Widgets.PositionedUiElement
+    | Widgets.SingleChildScrollViewUiElement
+    | Widgets.OpacityUiElement
+    | Widgets.IgnorePoinerUiElement
+    | Widgets.CustomSingleChildWidget<T>
+    | Widgets.CustomMultiChildWidget<T>
+    | Widgets.AlignUiElement
+    | Widgets.TransformUiElement
+    | Widgets.FittedBoxUiElement
+    | Widgets.RadioGroupContextUiElement;
 
-export type DuitElement =
-    TextUiElement
+export type DuitElement<T = any> =
+    Widgets.TextUiElement
     | DuitLeafElement
-    | RadioUiElement
-    | SliderUiElement
-    | CheckBoxUiElement
-    | TextFieldUiElement
-    | ImageUiElement
-    | RichTextUiElement
-    | ComponentUiElement
-    | DuitLayoutElement;
+    | Widgets.RadioUiElement
+    | Widgets.SliderUiElement
+    | Widgets.CheckBoxUiElement
+    | Widgets.TextFieldUiElement
+    | Widgets.ImageUiElement
+    | Widgets.RichTextUiElement
+    | DuitLayoutElement<T>;

@@ -36,4 +36,5 @@ export type DuitElement<T = any> =
     | Widgets.TextFieldUiElement
     | Widgets.ImageUiElement
     | Widgets.RichTextUiElement
+    | Widgets.SwitchUiElement
     | DuitLayoutElement<T>;

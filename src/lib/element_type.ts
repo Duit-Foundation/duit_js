@@ -31,6 +31,7 @@ enum DuitElementType {
   ignorePointer = "IgnorePointer",
   slider = "Slider",
   fittedBox = "FittedBox",
+  switch = "Switch",
 }
 
 export default DuitElementType;

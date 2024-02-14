@@ -3,6 +3,7 @@ enum ServerEventType {
     updateLayout = "updateLayout",
     navigation = "navigation",
     openUrl = "openUrl",
+    custom = "custom",
 }
 
 export abstract class ServerEvent {
@@ -51,6 +52,18 @@ export class OpenUrlEvent extends ServerEvent {
     }
 }
 
+export class CustomEvent extends ServerEvent {
+    type = ServerEventType.custom as const;
+    key: string;
+    extra?: Record<string, any>;
+
+    constructor(key: string, extra?: Record<string, any>) {
+        super();
+        this.key = key;
+        this.extra = extra;
+    }
+}
+
 export const CreateUpdateEvent = (updates: Record<string, any>) => {
     return new UpdateEvent(updates);
 }
@@ -65,4 +78,8 @@ export const CreateNavigationEvent = (path: string, extra?: Record<string, any>)
 
 export const CreateOpenUrlEvent = (url: string) => {
     return new OpenUrlEvent(url);
+}
+
+export const CreateCustomEvent = (key: string, extra?: Record<string, any>) => {
+    return new CustomEvent(key, extra);
 }

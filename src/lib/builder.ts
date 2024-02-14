@@ -8,17 +8,6 @@ export default class UIBuilder {
   private root?: DuitLayoutElement;
 
   /**
-   * Сhecks whether the type of the passed element is a container
-   * @param el DuitElement
-   * @returns element with layput element type or undefined
-   */
-  layoutTypeQualifier(el: DuitElement): DuitLayoutElement | undefined {
-    if (mayHaveChildList.has(el.type)) {
-      return el as DuitLayoutElement;
-    }
-  }
-
-  /**
    * Creates a root element of the exact specified type and returns it.
    *
    * @param {DuitElementType} type - The type of the root element to create.

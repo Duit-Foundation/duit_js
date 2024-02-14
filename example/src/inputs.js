@@ -1,4 +1,4 @@
-const { SizedBoxUiElement, Radio, Padding, Container, Row, GestureDetector, EdgeInsetsUtils, LocalExecutedAction, UpdateEvent, NavigationEvent, Column, RadioGroupContext } = require("duit_js");
+const { SizedBoxUiElement, Radio, Padding, Container, Row, GestureDetector, EdgeInsetsUtils, LocalExecutedAction, UpdateEvent, NavigationEvent, Column, RadioGroupContext, CustomEvent } = require("duit_js");
 const { PaddingUiElement } = require("duit_js");
 const { CheckBoxUiElement } = require("duit_js");
 const { RowUiElement } = require("duit_js");
@@ -153,6 +153,7 @@ function inputExample() {
             new TextUiElement({data: ""}, "text1", null, true),
             new TextUiElement({data: ""}, "text2", null, true),
             new TextUiElement({data: ""}, "text3", null, true),
+            new ElevatedButtonUiElement({}, "custom_action_button", new LocalExecutedAction(new CustomEvent("event1", {}))).addChild(new TextUiElement({data: "Custom event 1 runner"})),
         ]
     )
 

@@ -1,4 +1,4 @@
-const { SizedBoxUiElement, Radio, Padding, Container, Row, GestureDetector, EdgeInsetsUtils, LocalExecutedAction, UpdateEvent, NavigationEvent, Column, RadioGroupContext, CustomEvent } = require("duit_js");
+const { SizedBoxUiElement, Radio, Padding, Container, Row, GestureDetector, EdgeInsetsUtils, LocalExecutedAction, UpdateEvent, NavigationEvent, Column, RadioGroupContext, CustomEvent, CreateSequencedEventGroup, CreateUpdateEvent, CreateCommonEventGroup, CreateCustomEvent } = require("duit_js");
 const { PaddingUiElement } = require("duit_js");
 const { CheckBoxUiElement } = require("duit_js");
 const { RowUiElement } = require("duit_js");
@@ -150,10 +150,69 @@ function inputExample() {
                 )
             ),
             new SizedBoxUiElement({height: 24}),
-            new TextUiElement({data: ""}, "text1", null, true),
-            new TextUiElement({data: ""}, "text2", null, true),
-            new TextUiElement({data: ""}, "text3", null, true),
+            new TextUiElement({data: ""}, "text1", true),
+            new TextUiElement({data: ""}, "text2", true),
+            new TextUiElement({data: ""}, "text3", true),
             new ElevatedButtonUiElement({}, "custom_action_button", new LocalExecutedAction(new CustomEvent("event1", {}))).addChild(new TextUiElement({data: "Custom event 1 runner"})),
+            new ElevatedButtonUiElement({}, "Sequence", new LocalExecutedAction(CreateSequencedEventGroup([
+                {
+                    event: CreateUpdateEvent({
+                        text1: {
+                            data: "text1"
+                        },
+                        text2: {
+                            data: "text2"
+                        },
+                        text3: {
+                            data: "text3"
+                        },
+                    }),
+                    delay: 1000,
+                },
+                {
+                    event: CreateUpdateEvent({
+                        text1: {
+                            data:  "text1 changed"
+                        },
+                        text2: {
+                            data: "text2 changed"
+                        },
+                        text3: {
+                            data: "text3 changed"
+                        },
+                    }),
+                    delay: 1000,
+                },
+                {
+                    event: CreateUpdateEvent({
+                        text1: {
+                            data: "text1 changed twice"
+                        },
+                        text2: {
+                            data:  "text2 changed twice"
+                        },
+                        text3: {
+                            data: "text3 changed twice"
+                        },
+                    }),
+                    delay: 0,
+                },
+            ]))).addChild(new TextUiElement({data: "Run sequence"})),
+            new ElevatedButtonUiElement({}, "CommonGroup", new LocalExecutedAction(CreateCommonEventGroup([
+                CreateUpdateEvent({
+                    text1: {
+                        data: "common text1"
+                    },
+                    text2: {
+                        data:  "common text2"
+                    },
+                    text3: {
+                        data: "common text3"
+                    },
+                }),
+                CreateCustomEvent("event1"),
+                CreateCustomEvent("event2"),
+            ]))).addChild(new TextUiElement({data: "Run group"})),
         ]
     )
 

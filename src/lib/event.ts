@@ -4,6 +4,8 @@ enum ServerEventType {
     navigation = "navigation",
     openUrl = "openUrl",
     custom = "custom",
+    sequenced = "sequenced",
+    grouped = "grouped",
 }
 
 export abstract class ServerEvent {
@@ -52,6 +54,32 @@ export class OpenUrlEvent extends ServerEvent {
     }
 }
 
+interface SequencedEvent {
+    event: ServerEvent;
+    //delay in ms
+    delay: number;
+}
+
+export class CommonEventGroup extends ServerEvent {
+    type = ServerEventType.grouped as const;
+    events: ServerEvent[];
+
+    constructor(events: ServerEvent[]) {
+        super();
+        this.events = events;
+    }
+}
+
+export class SequencedEventGroup extends ServerEvent {
+    type = ServerEventType.sequenced as const;
+    events: SequencedEvent[];
+
+    constructor(events: SequencedEvent[]) {
+        super();
+        this.events = events;
+    }
+}
+
 export class CustomEvent extends ServerEvent {
     type = ServerEventType.custom as const;
     key: string;
@@ -82,4 +110,12 @@ export const CreateOpenUrlEvent = (url: string) => {
 
 export const CreateCustomEvent = (key: string, extra?: Record<string, any>) => {
     return new CustomEvent(key, extra);
+}
+
+export const CreateSequencedEventGroup = (events: SequencedEvent[]) => {
+    return new SequencedEventGroup(events);
+}
+
+export const CreateCommonEventGroup = (events: ServerEvent[]) => {
+    return new CommonEventGroup(events);
 }

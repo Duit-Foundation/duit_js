@@ -5,7 +5,14 @@ type HttpMethod = "POST" | "GET" | "PATCH" | "DELETE";
 
 enum ExecutionType {
     transport,
-    local
+    local,
+    script,
+}
+
+interface Script {
+    functionName: string;
+    sourceCode: string;
+    meta?: Record<string, any>;
 }
 
 /**
@@ -79,5 +86,14 @@ export class LocalExecutedAction extends BaseAction {
     constructor(payload: ServerEvent) {
         super("local_event", []);
         this.payload = payload;
+    }
+}
+
+export class ScriptAction extends BaseAction {
+    executionType = ExecutionType.script as const;
+    script: Script;
+    constructor(event: string, script: Script, dependsOn: ActionDependency[] = []) {
+        super(event, dependsOn);
+        this.script = script;
     }
 }

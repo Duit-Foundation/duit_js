@@ -33,6 +33,7 @@ enum DuitElementType {
   fittedBox = "FittedBox",
   switch = "Switch",
   subtree = "Subtree",
+  meta = "Meta",
 }
 
 export default DuitElementType;

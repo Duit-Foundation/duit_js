@@ -25,6 +25,7 @@ export type DuitLayoutElement<T = any> =
     | Widgets.AlignUiElement
     | Widgets.TransformUiElement
     | Widgets.FittedBoxUiElement
+    | Widgets.MetaUiElement
     | Widgets.RadioGroupContextUiElement;
 
 export type DuitElement<T = any> =

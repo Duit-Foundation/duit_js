@@ -24,5 +24,7 @@ export { OpacityAttributes } from "./opacity_attributes";
 export { IgnorePointerAttributes } from "./ignore_pointer_attributes";
 export { FittedBoxAttributes } from "./fitted_box_attributes";
 export { SwichAttributes } from "./switch_attributes";
+export { SliderAttributes } from "./slider_attributes";
+export { MetaAttributes } from "./meta_attributes";
 export { Ref, ValueReferenceHolder } from "./value_reference_holder";
 export * from "./properties/index";

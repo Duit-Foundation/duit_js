@@ -34,6 +34,7 @@ enum DuitElementType {
   switch = "Switch",
   subtree = "Subtree",
   meta = "Meta",
+  listView = "ListView",
 }
 
 export default DuitElementType;

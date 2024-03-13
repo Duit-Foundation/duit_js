@@ -30,3 +30,5 @@ export * from "./insets";
 export * from "./color";
 export * from "./mateatial_tap_target_size";
 export * from "./slider_interaction";
+export * from "./merge_strategy";
+export * from "./list_kind";

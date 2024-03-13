@@ -15,6 +15,6 @@ export class ListViewUiElement extends MultiChildLayout {
     }
 }
 
-export const ListView = (props: PropsWithAction<ListViewAttributes>): ListViewUiElement => {
+export const ListViewWidget = (props: PropsWithAction<ListViewAttributes>): ListViewUiElement => {
     return new ListViewUiElement(props.attributes, props.id, props.controlled, props.action);
 }

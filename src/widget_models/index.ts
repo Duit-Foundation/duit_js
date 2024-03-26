@@ -33,3 +33,4 @@ export * from "./switch";
 export * from "./subtree";
 export * from "./meta";
 export * from "./list_view";
+export * from "./repaint_boundary"

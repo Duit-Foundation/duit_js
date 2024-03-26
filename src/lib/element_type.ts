@@ -35,6 +35,7 @@ enum DuitElementType {
   subtree = "Subtree",
   meta = "Meta",
   listView = "ListView",
+  repaintBoundary = "RepaintBoundary",
 }
 
 export default DuitElementType;

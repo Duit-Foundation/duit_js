@@ -34,3 +34,4 @@ export * from "./text_field.widget";
 export * from "./text.widget";
 export * from "./transform.widget";
 export * from "./wrap.widget";
+export * from "./animated_size.widget";

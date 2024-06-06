@@ -33,3 +33,5 @@ export * from "./slider_interaction";
 export * from "./merge_strategy";
 export * from "./list_kind";
 export * from "./overflow_box_fit";
+export * from "./alignment";
+export * from "./curves";

@@ -28,6 +28,7 @@ export { SliderAttributes } from "./slider_attributes";
 export { MetaAttributes } from "./meta_attributes";
 export { RepaintBoundaryAttributes } from "./repaint_boundary_attributes";
 export { OverflowBoxAttributes } from "./overflow_box_attributes";
+export { AnimatedSizeAttributes } from "./animated_size_attributes";
 export * from "./list_view_attributes";
 export { Ref, ValueReferenceHolder } from "./value_reference_holder";
 export * from "./properties/index";

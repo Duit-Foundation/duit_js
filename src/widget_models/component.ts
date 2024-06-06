@@ -1,4 +1,3 @@
-import { DuitElement } from "../lib/element";
 import DuitElementType from "../lib/element_type";
 import { DuitLeafElement } from "./child";
 
@@ -12,21 +11,4 @@ export class ComponentUiElement extends DuitLeafElement {
         this.data = data;
         this.tag = tag;
     }
-}
-
-interface ComponentProps {
-    data: Object;
-    tag: string;
-    id?: string;
-}
-
-export const ComponentDescription = (tag: string, layoutRoot: DuitElement) => {
-    return {
-        tag,
-        layoutRoot,
-    }
-}
-
-export const Component = (props: ComponentProps) => {
-    return new ComponentUiElement(props.data, props.tag, props.id);
 }

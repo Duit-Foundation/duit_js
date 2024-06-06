@@ -2,18 +2,15 @@ import { MultiChildLayout } from "./child";
 import DuitElementType from "../lib/element_type";
 
 import type { FlexAttributes } from "../attributes";
-import type { BaseProps } from "./props";
+import type { DuitElement } from "../lib/element";
 
 export class RowUiElement extends MultiChildLayout {
   type = DuitElementType.row as const;
   attributes: FlexAttributes;
 
-  constructor(attrs: FlexAttributes, id?: string, controlled?: boolean) {
+  constructor(attrs: FlexAttributes, id?: string, controlled?: boolean, children?: DuitElement[]) {
     super(id, null, controlled);
     this.attributes = attrs;
+    this.children = children;
   }
-}
-
-export const Row = (props: BaseProps<FlexAttributes>): RowUiElement => {
-  return new RowUiElement(props.attributes, props.id, props.controlled);
 }

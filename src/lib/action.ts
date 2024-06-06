@@ -4,7 +4,7 @@ import { ServerEvent } from "./event";
 type HttpMethod = "POST" | "GET" | "PATCH" | "DELETE";
 
 enum ExecutionType {
-    transport,
+    transport = 0,
     local,
     script,
 }

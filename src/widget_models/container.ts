@@ -2,18 +2,15 @@ import { SingleChildLayout } from "./child";
 import DuitElementType from "../lib/element_type";
 
 import type { ContainerAttributes } from "../attributes";
-import type { BaseProps } from "./props";
+import type { DuitElement } from "../lib/element";
 
 export class ContainerUiElement extends SingleChildLayout {
   type = DuitElementType.container as const;
   attributes: ContainerAttributes;
 
-  constructor(attrs: ContainerAttributes, id?: string, controlled?: boolean) {
+  constructor(attrs: ContainerAttributes, id?: string, controlled?: boolean, child?: DuitElement) {
     super(id, null, controlled);
     this.attributes = attrs;
+    this.child = child;
   }
-}
-
-export const Container = (props: BaseProps<ContainerAttributes>): ContainerUiElement => {
-  return new ContainerUiElement(props.attributes, props.id, props.controlled);
 }

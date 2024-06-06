@@ -2,18 +2,15 @@ import { SingleChildLayout } from "./child";
 import DuitElementType from "../lib/element_type";
 
 import type { PaddingAttributes } from "../attributes";
-import type { BaseProps } from "./props";
+import type { DuitElement } from "../lib/element";
 
 export class PaddingUiElement extends SingleChildLayout {
     type = DuitElementType.padding as const;
     attributes: PaddingAttributes;
 
-    constructor(attrs: PaddingAttributes, id?: string, controlled?: boolean) {
+    constructor(attrs: PaddingAttributes, id?: string, controlled?: boolean, child?: DuitElement) {
         super(id, null, controlled);
         this.attributes = attrs;
+        this.child = child;
     }
-}
-
-export const Padding = (props: BaseProps<PaddingAttributes>): PaddingUiElement => {
-    return new PaddingUiElement(props.attributes, props.id, props.controlled);
 }

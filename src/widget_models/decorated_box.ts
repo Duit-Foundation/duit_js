@@ -2,18 +2,15 @@ import { SingleChildLayout } from "./child";
 import DuitElementType from "../lib/element_type";
 
 import type { DecoratedBoxAttributes } from "../attributes/decorated_box_attributes";
-import type { BaseProps } from "./props";
+import type { DuitElement } from "../lib/element";
 
 export class DecoratedBoxUiElement extends SingleChildLayout {
   type = DuitElementType.decoratedBox as const;
   attributes: DecoratedBoxAttributes;
 
-  constructor(attrs: DecoratedBoxAttributes, id?: string, controlled?: boolean) {
+  constructor(attrs: DecoratedBoxAttributes, id?: string, controlled?: boolean, child?: DuitElement) {
     super(id, null, controlled);
     this.attributes = attrs;
+    this.child = child;
   }
-}
-
-export const DecoratedBox = (props: BaseProps<DecoratedBoxAttributes>): DecoratedBoxUiElement => {
-  return new DecoratedBoxUiElement(props.attributes, props.id, props.controlled);
 }

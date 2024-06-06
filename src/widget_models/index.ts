@@ -36,3 +36,4 @@ export * from "./list_view";
 export * from "./repaint_boundary";
 export * from "./overflow_box";
 export * from "./animated_size";
+export * from "./animated_builder";

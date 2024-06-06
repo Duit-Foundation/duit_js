@@ -12,7 +12,7 @@ export abstract class ServerEvent {
     abstract type: ServerEventType;
 }
 
-export class UpdateEvent extends ServerEvent {
+class _UpdateEvent extends ServerEvent {
     type = ServerEventType.update as const;
     updates: Record<string, any>;
 
@@ -22,7 +22,7 @@ export class UpdateEvent extends ServerEvent {
     }
 }
 
-export class LayoutUpdateEvent extends ServerEvent {
+class _LayoutUpdateEvent extends ServerEvent {
     type = ServerEventType.updateLayout as const;
     layout?: string;
 
@@ -32,7 +32,7 @@ export class LayoutUpdateEvent extends ServerEvent {
     }
 }
 
-export class NavigationEvent extends ServerEvent {
+class _NavigationEvent extends ServerEvent {
     type = ServerEventType.navigation as const;
     path: string;
     extra?: Record<string, any>;
@@ -44,7 +44,7 @@ export class NavigationEvent extends ServerEvent {
     }
 }
 
-export class OpenUrlEvent extends ServerEvent {
+class _OpenUrlEvent extends ServerEvent {
     type = ServerEventType.openUrl as const;
     url: string;
 
@@ -60,7 +60,7 @@ interface SequencedEvent {
     delay: number;
 }
 
-export class CommonEventGroup extends ServerEvent {
+class _CommonEventGroup extends ServerEvent {
     type = ServerEventType.grouped as const;
     events: ServerEvent[];
 
@@ -70,7 +70,7 @@ export class CommonEventGroup extends ServerEvent {
     }
 }
 
-export class SequencedEventGroup extends ServerEvent {
+class _SequencedEventGroup extends ServerEvent {
     type = ServerEventType.sequenced as const;
     events: SequencedEvent[];
 
@@ -80,7 +80,7 @@ export class SequencedEventGroup extends ServerEvent {
     }
 }
 
-export class CustomEvent extends ServerEvent {
+class _CustomEvent extends ServerEvent {
     type = ServerEventType.custom as const;
     key: string;
     extra?: Record<string, any>;
@@ -92,30 +92,30 @@ export class CustomEvent extends ServerEvent {
     }
 }
 
-export const CreateUpdateEvent = (updates: Record<string, any>) => {
-    return new UpdateEvent(updates);
+export const UpdateEvent = (updates: Record<string, any>) => {
+    return new _UpdateEvent(updates);
 }
 
-export const CreateLayoutUpdateEvent = (layout: string) => {
-    return new LayoutUpdateEvent(layout);
+export const LayoutUpdateEvent = (layout: string) => {
+    return new _LayoutUpdateEvent(layout);
 }
 
-export const CreateNavigationEvent = (path: string, extra?: Record<string, any>) => {
-    return new NavigationEvent(path, extra);
+export const NavigationEvent = (path: string, extra?: Record<string, any>) => {
+    return new _NavigationEvent(path, extra);
 }
 
-export const CreateOpenUrlEvent = (url: string) => {
-    return new OpenUrlEvent(url);
+export const OpenUrlEvent = (url: string) => {
+    return new _OpenUrlEvent(url);
 }
 
-export const CreateCustomEvent = (key: string, extra?: Record<string, any>) => {
-    return new CustomEvent(key, extra);
+export const CustomEvent = (key: string, extra?: Record<string, any>) => {
+    return new _CustomEvent(key, extra);
 }
 
-export const CreateSequencedEventGroup = (events: SequencedEvent[]) => {
-    return new SequencedEventGroup(events);
+export const SequencedEventGroup = (events: SequencedEvent[]) => {
+    return new _SequencedEventGroup(events);
 }
 
-export const CreateCommonEventGroup = (events: ServerEvent[]) => {
-    return new CommonEventGroup(events);
+export const CommonEventGroup = (events: ServerEvent[]) => {
+    return new _CommonEventGroup(events);
 }

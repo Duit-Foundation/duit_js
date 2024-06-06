@@ -5,8 +5,9 @@ import type { MainAxisSize } from "./properties/main_axis_size";
 import type { TextDirection } from "./properties/text_direction";
 import type { VerticalDirection } from "./properties/vertical_direction";
 import type { ValueReferenceHolder } from "./value_reference_holder";
+import type { AnimatedPropertyOwner } from "../animations";
 
-export interface FlexAttributes extends ValueReferenceHolder<FlexAttributes> {
+export interface FlexAttributes extends ValueReferenceHolder<FlexAttributes>, AnimatedPropertyOwner {
   mainAxisAlignment?: keyof typeof MainAxisAlignment;
   mainAxisSize?: keyof typeof MainAxisSize;
   crossAxisAlignment?: keyof typeof CrossAxisAlignment;

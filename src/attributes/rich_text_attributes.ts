@@ -1,3 +1,4 @@
+import { AnimatedPropertyOwner } from "../animations";
 import type { Color } from "./properties/color";
 import type { StrutStyle } from "./properties/strut_style";
 import type { TextAlign } from "./properties/text_align";
@@ -10,7 +11,7 @@ import type { TextStyle } from "./properties/text_style";
 import type { TextWidghtBasis } from "./properties/text_wigth_basis";
 import type { ValueReferenceHolder } from "./value_reference_holder";
 
-export interface RichTextAttributes extends ValueReferenceHolder<RichTextAttributes> {
+export interface RichTextAttributes extends ValueReferenceHolder<RichTextAttributes>, AnimatedPropertyOwner {
     textSpan?: TextSpan;
     style?: TextStyle;
     textAlign?: keyof typeof TextAlign;

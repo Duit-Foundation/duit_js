@@ -5,8 +5,9 @@ import type { BoxConstraints } from "./properties/box_constraits"
 import type { Clip } from "./properties/clip"
 import type { BoxDecoration } from "./properties/decoration"
 import type { ValueReferenceHolder } from "./value_reference_holder"
+import { AnimatedPropertyOwner } from "../animations"
 
-export interface ContainerAttributes extends ValueReferenceHolder<ContainerAttributes> {
+export interface ContainerAttributes extends ValueReferenceHolder<ContainerAttributes>, AnimatedPropertyOwner {
     constraints?: BoxConstraints
     padding?: EdgeInsets
     margin?: EdgeInsets

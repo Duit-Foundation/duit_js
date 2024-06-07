@@ -1,5 +1,5 @@
 import type { BaseAction } from "../lib/action";
-import type { Alignment, Border, Color, Curves, EdgeInsets, Size, BoxConstraints, BoxDecoration, TextStyle, AnimationTrigger, AnimationMethod } from "./properties";
+import { Alignment, Border, Color, Curves, EdgeInsets, Size, BoxConstraints, BoxDecoration, TextStyle, AnimationTrigger, AnimationMethod } from "./properties";
 
 export interface AnimatedBuilderAttributes {
     tweenDescriptions: TweenDescription[];
@@ -14,8 +14,8 @@ abstract class TweenBase<T> {
     end: T;
     reverseOnRepeat?: boolean;
     onAnimationEnd?: BaseAction;
-    trigger: keyof typeof AnimationTrigger;
-    method: keyof typeof AnimationMethod;
+    trigger: AnimationTrigger;
+    method: AnimationMethod;
 
     constructor(
         animatedPropKey: string,
@@ -23,8 +23,8 @@ abstract class TweenBase<T> {
         begin: T,
         end: T,
         curve: keyof typeof Curves,
-        trigger?: keyof typeof AnimationTrigger,
-        method?: keyof typeof AnimationMethod,
+        trigger?: AnimationTrigger,
+        method?: AnimationMethod,
         reverseOnRepeat?: boolean,
         onAnimationEnd?: BaseAction
     ) {
@@ -35,14 +35,14 @@ abstract class TweenBase<T> {
         this.begin = begin;
         this.end = end;
         this.reverseOnRepeat = false;
-        this.trigger = trigger ?? "onEnter";
-        this.method = method ?? "forward";
+        this.trigger = trigger ?? AnimationTrigger.onEnter;
+        this.method = method ?? AnimationMethod.forward;
         this.onAnimationEnd = onAnimationEnd;
         reverseOnRepeat = reverseOnRepeat;
     }
 }
 
-type TweenDescription = Tween | ColorTween | TextStyleTween | BorderTween | EdgeInsetsTween | SizeTween | BoxConstraintsTween | DecorationTween;
+type TweenDescription = Tween | ColorTween | TextStyleTween | BorderTween | EdgeInsetsTween | SizeTween | BoxConstraintsTween | DecorationTween | AlignmentTween;
 
 class Tween extends TweenBase<any> {
     type = "tween" as const;
@@ -52,8 +52,8 @@ class Tween extends TweenBase<any> {
         begin: any,
         end: any,
         curve: keyof typeof Curves,
-        trigger?: keyof typeof AnimationTrigger,
-        method?: keyof typeof AnimationMethod,
+        trigger?: AnimationTrigger,
+        method?: AnimationMethod,
         reverseOnRepeat?: boolean,
         onAnimationEnd?: BaseAction
     ) {
@@ -69,8 +69,8 @@ class ColorTween extends TweenBase<Color> {
         begin: Color,
         end: Color,
         curve: keyof typeof Curves,
-        trigger?: keyof typeof AnimationTrigger,
-        method?: keyof typeof AnimationMethod,
+        trigger?: AnimationTrigger,
+        method?: AnimationMethod,
         reverseOnRepeat?: boolean,
         onAnimationEnd?: BaseAction
     ) {
@@ -86,8 +86,8 @@ class TextStyleTween extends TweenBase<TextStyle> {
         begin: TextStyle,
         end: TextStyle,
         curve: keyof typeof Curves,
-        trigger?: keyof typeof AnimationTrigger,
-        method?: keyof typeof AnimationMethod,
+        trigger?: AnimationTrigger,
+        method?: AnimationMethod,
         reverseOnRepeat?: boolean,
         onAnimationEnd?: BaseAction
     ) {
@@ -103,8 +103,8 @@ class DecorationTween extends TweenBase<BoxDecoration> {
         begin: BoxDecoration,
         end: BoxDecoration,
         curve: keyof typeof Curves,
-        trigger?: keyof typeof AnimationTrigger,
-        method?: keyof typeof AnimationMethod,
+        trigger?: AnimationTrigger,
+        method?: AnimationMethod,
         reverseOnRepeat?: boolean,
         onAnimationEnd?: BaseAction
     ) {
@@ -120,8 +120,8 @@ class AlignmentTween extends TweenBase<Alignment> {
         begin: Alignment,
         end: Alignment,
         curve: keyof typeof Curves,
-        trigger?: keyof typeof AnimationTrigger,
-        method?: keyof typeof AnimationMethod,
+        trigger?: AnimationTrigger,
+        method?: AnimationMethod,
         reverseOnRepeat?: boolean,
         onAnimationEnd?: BaseAction
     ) {
@@ -137,8 +137,8 @@ class EdgeInsetsTween extends TweenBase<EdgeInsets> {
         begin: EdgeInsets,
         end: EdgeInsets,
         curve: keyof typeof Curves,
-        trigger?: keyof typeof AnimationTrigger,
-        method?: keyof typeof AnimationMethod,
+        trigger?: AnimationTrigger,
+        method?: AnimationMethod,
         reverseOnRepeat?: boolean,
         onAnimationEnd?: BaseAction
     ) {
@@ -154,8 +154,8 @@ class BoxConstraintsTween extends TweenBase<BoxConstraints> {
         begin: BoxConstraints,
         end: BoxConstraints,
         curve: keyof typeof Curves,
-        trigger?: keyof typeof AnimationTrigger,
-        method?: keyof typeof AnimationMethod,
+        trigger?: AnimationTrigger,
+        method?: AnimationMethod,
         reverseOnRepeat?: boolean,
         onAnimationEnd?: BaseAction
     ) {
@@ -171,8 +171,8 @@ class SizeTween extends TweenBase<Size> {
         begin: Size,
         end: Size,
         curve: keyof typeof Curves,
-        trigger?: keyof typeof AnimationTrigger,
-        method?: keyof typeof AnimationMethod,
+        trigger?: AnimationTrigger,
+        method?: AnimationMethod,
         reverseOnRepeat?: boolean,
         onAnimationEnd?: BaseAction
     ) {
@@ -188,8 +188,8 @@ class BorderTween extends TweenBase<Border> {
         begin: Border,
         end: Border,
         curve: keyof typeof Curves,
-        trigger?: keyof typeof AnimationTrigger,
-        method?: keyof typeof AnimationMethod,
+        trigger?: AnimationTrigger,
+        method?: AnimationMethod,
         reverseOnRepeat?: boolean,
         onAnimationEnd?: BaseAction
     ) {

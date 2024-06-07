@@ -1,5 +1,6 @@
 {
   "name": "duit_js",
+  "version": "3.0.1",
   "version": "3.0.0",
   "description": "JavaScript adapter for Duit Framework - drived UI toolkit for Flutter",
   "main": "dist/index.js",

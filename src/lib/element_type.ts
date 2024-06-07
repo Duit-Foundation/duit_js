@@ -37,6 +37,8 @@ enum DuitElementType {
   listView = "ListView",
   repaintBoundary = "RepaintBoundary",
   overflowBox = "OverflowBox",
+  animatedSize = "AnimatedSize",
+  animatedBuilder = "AnimatedBuilder",
 }
 
 export default DuitElementType;

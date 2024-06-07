@@ -28,6 +28,8 @@ export type DuitLayoutElement<T = any> =
     | Widgets.MetaUiElement
     | Widgets.ListViewUiElement
     | Widgets.RepaintBoundaryUiElement
+    | Widgets.AnimatedSizeUiElement
+    | Widgets.AnimatedBuilderUiElement
     | Widgets.RadioGroupContextUiElement;
 
 export type DuitElement<T = any> =

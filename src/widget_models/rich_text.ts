@@ -13,7 +13,3 @@ export class RichTextUiElement extends DuitLeafElement {
     this.attributes = attrs;
   }
 }
-
-export const RichText = (props: BaseProps<RichTextAttributes>): RichTextUiElement => {
-  return new RichTextUiElement(props.attributes, props.id, props.controlled);
-}

@@ -8,5 +8,3 @@ export class EmptyUiElement extends DuitLeafElement {
     super(undefined, undefined, true);
   }
 }
-
-export const Empty = () => new EmptyUiElement();

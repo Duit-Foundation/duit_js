@@ -2,18 +2,15 @@ import { SingleChildLayout } from "./child";
 import DuitElementType from "../lib/element_type";
 
 import type { CenterAttributes } from "../attributes";
-import type { BaseProps } from "./props";
+import type { DuitElement } from "../lib/element";
 
 export class CenterUiElement extends SingleChildLayout {
   type = DuitElementType.center as const;
   attributes: CenterAttributes;
 
-  constructor(attrs: CenterAttributes, id?: string, controlled?: boolean) {
+  constructor(attrs: CenterAttributes, id?: string, controlled?: boolean, child?: DuitElement) {
     super(id, null, controlled);
     this.attributes = attrs;
+    this.child = child;
   }
-}
-
-export const Center = (props: BaseProps<CenterAttributes>): CenterUiElement => {
-  return new CenterUiElement(props.attributes, props.id, props.controlled);
 }

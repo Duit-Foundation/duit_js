@@ -2,8 +2,8 @@ import DuitElementType from "../lib/element_type";
 import { DuitLeafElement, SingleChildLayout } from "./child";
 
 import type { RadioAttributes, RadioGroupContextAttributes } from "../attributes";
-import type { BaseProps, PropsWithAction } from "./props";
-import { BaseAction } from "../lib/action";
+import type { BaseAction } from "../lib/action";
+import type { DuitElement } from "../lib/element";
 
 export class RadioUiElement extends DuitLeafElement {
   type = DuitElementType.radio as const;
@@ -19,16 +19,9 @@ export class RadioGroupContextUiElement extends SingleChildLayout {
   type = DuitElementType.radioGroupContext as const;
   attributes: RadioGroupContextAttributes;
 
-  constructor(attrs: RadioGroupContextAttributes, id?: string, action?: BaseAction) {
+  constructor(attrs: RadioGroupContextAttributes, id?: string, action?: BaseAction, child?: DuitElement) {
     super(id, action, true);
     this.attributes = attrs;
+    this.child = child;
   }
 } 
-
-export const Radio = (props: BaseProps<RadioAttributes>): RadioUiElement => {
-  return new RadioUiElement(props.attributes, props.id, props.controlled);
-}
-
-export const RadioGroupContext = (props: PropsWithAction<RadioGroupContextAttributes>): RadioGroupContextUiElement => {
-  return new RadioGroupContextUiElement(props.attributes, props.id, props.action);
-}

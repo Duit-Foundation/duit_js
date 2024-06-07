@@ -1,3 +1,4 @@
+import { AnimatedPropertyOwner } from "../animations";
 import type { Alignment } from "./properties/alignment";
 import type { FilterQuality } from "./properties/filter_quality";
 import type { Offset } from "./properties/offset";
@@ -39,7 +40,7 @@ type Transfroms = {
 
 type InferTransfrom<T extends keyof typeof TransformType> = Transfroms[T]
 
-export interface TransformAttributes<T extends keyof typeof TransformType = "scale"> extends ValueReferenceHolder<InferTransfrom<T>> {
+export interface TransformAttributes<T extends keyof typeof TransformType = "scale"> extends ValueReferenceHolder<InferTransfrom<T>>, AnimatedPropertyOwner {
     type: T;
     data: InferTransfrom<T>
 }

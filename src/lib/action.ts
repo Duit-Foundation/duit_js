@@ -4,7 +4,7 @@ import { ServerEvent } from "./event";
 type HttpMethod = "POST" | "GET" | "PATCH" | "DELETE";
 
 enum ExecutionType {
-    transport,
+    transport = 0,
     local,
     script,
 }
@@ -55,10 +55,10 @@ export class BaseAction {
 
 /**
  * Represents an HTTP action that can be performed in the application.
- * @class HttpAction
+ * @class _HttpAction
  * @extends BaseAction
  */
-export class HttpAction extends BaseAction {
+class _HttpAction extends BaseAction {
     meta: HttpActionMetainfo;
     executionType = ExecutionType.transport as const;
 
@@ -73,14 +73,14 @@ export class HttpAction extends BaseAction {
  * @class WebSocketAction
  * @extends BaseAction
  */
-export class WebSocketAction extends BaseAction {
+class _WebSocketAction extends BaseAction {
     executionType = ExecutionType.transport as const;
     constructor(event: string, dependsOn: ActionDependency[] = []) {
         super(event, dependsOn);
     }
 }
 
-export class LocalExecutedAction extends BaseAction {
+class _LocalExecutedAction extends BaseAction {
     executionType = ExecutionType.local as const;
     payload: ServerEvent;
     constructor(payload: ServerEvent) {
@@ -89,11 +89,28 @@ export class LocalExecutedAction extends BaseAction {
     }
 }
 
-export class ScriptAction extends BaseAction {
+class _ScriptAction extends BaseAction {
     executionType = ExecutionType.script as const;
     script: Script;
     constructor(event: string, script: Script, dependsOn: ActionDependency[] = []) {
         super(event, dependsOn);
         this.script = script;
     }
+}
+
+export const HttpAction = (event: string, meta: HttpActionMetainfo, dependsOn: ActionDependency[] = []) => {
+    return new _HttpAction(event, meta, dependsOn);
+}
+
+export const LocalExecutedAction = (payload: ServerEvent) => {
+    return new _LocalExecutedAction(payload);
+}
+
+
+export const WebSocketAction = (event: string, dependsOn: ActionDependency[] = []) => {
+    return new _WebSocketAction(event, dependsOn);
+}
+
+export const ScriptAction = (event: string, script: Script, dependsOn: ActionDependency[] = []) => {
+    return new _ScriptAction(event, script, dependsOn);
 }

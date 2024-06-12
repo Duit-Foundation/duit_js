@@ -10,7 +10,7 @@ export class AnimatedBuilderUiElement extends SingleChildLayout {
   attributes: AnimatedBuilderAttributes;
 
   constructor(attrs: AnimatedBuilderAttributes, id?: string, child?: DuitElement) {
-    super(id, null, false);
+    super(id, null, true);
     this.attributes = attrs;
     this.child = child;
   }

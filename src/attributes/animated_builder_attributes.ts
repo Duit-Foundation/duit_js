@@ -3,6 +3,7 @@ import { Alignment, Border, Color, Curves, EdgeInsets, Size, BoxConstraints, Box
 
 export interface AnimatedBuilderAttributes {
     tweenDescriptions: TweenDescription[];
+    persistentId?: string;
 }
 
 abstract class TweenBase<T> {

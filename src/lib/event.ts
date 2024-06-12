@@ -1,3 +1,5 @@
+import { AnimationMethod } from "../attributes";
+
 enum ServerEventType {
     update = "update",
     updateLayout = "updateLayout",
@@ -6,6 +8,7 @@ enum ServerEventType {
     custom = "custom",
     sequenced = "sequenced",
     grouped = "grouped",
+    animationTrigger = "animationTrigger",
 }
 
 export abstract class ServerEvent {
@@ -92,6 +95,20 @@ class _CustomEvent extends ServerEvent {
     }
 }
 
+class _AnimationTriggerEvent extends ServerEvent {
+    type = ServerEventType.animationTrigger as const;
+    method: AnimationMethod;
+    controllerId: string;
+    animatedPropKey: string;
+
+    constructor(method: AnimationMethod, controllerId: string, animatedPropKey: string) {
+        super();
+        this.method = method;
+        this.controllerId = controllerId;
+        this.animatedPropKey = animatedPropKey;
+    }
+}
+
 export const UpdateEvent = (updates: Record<string, any>) => {
     return new _UpdateEvent(updates);
 }
@@ -118,4 +135,8 @@ export const SequencedEventGroup = (events: SequencedEvent[]) => {
 
 export const CommonEventGroup = (events: ServerEvent[]) => {
     return new _CommonEventGroup(events);
+}
+
+export const AnimationTriggerEvent = (method: AnimationMethod, controllerId: string, animatedPropKey: string) => {
+    return new _AnimationTriggerEvent(method, controllerId, animatedPropKey);
 }

@@ -83,20 +83,3 @@ export default class UIBuilder {
     return this.root;
   }
 }
-
-const mayHaveChildList = new Set([
-  DuitElementType.center,
-  DuitElementType.coloredBox,
-  DuitElementType.column,
-  DuitElementType.row,
-  DuitElementType.sizedBox,
-  DuitElementType.elevatedButton,
-  DuitElementType.expanded,
-  DuitElementType.padding,
-  DuitElementType.positioned,
-  DuitElementType.stack,
-  DuitElementType.decoratedBox,
-  DuitElementType.container,
-  DuitElementType.gestureDetector,
-  DuitElementType.align,
-]);

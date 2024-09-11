@@ -1,7 +1,8 @@
 import type { BaseAction } from "../lib/action";
 import { Alignment, Border, Color, Curves, EdgeInsets, Size, BoxConstraints, BoxDecoration, TextStyle, AnimationTrigger, AnimationMethod } from "./properties";
+import { ValueReferenceHolder } from "./value_reference_holder";
 
-export interface AnimatedBuilderAttributes {
+export interface AnimatedBuilderAttributes extends ValueReferenceHolder<AnimatedBuilderAttributes> {
     tweenDescriptions: TweenDescription[];
     persistentId?: string;
 }

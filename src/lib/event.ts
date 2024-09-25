@@ -9,6 +9,7 @@ enum ServerEventType {
     sequenced = "sequenced",
     grouped = "grouped",
     animationTrigger = "animationTrigger",
+    timerEvent = "timerEvent",
 }
 
 export abstract class ServerEvent {
@@ -109,6 +110,18 @@ class _AnimationTriggerEvent extends ServerEvent {
     }
 }
 
+class _TimerEvent extends ServerEvent {
+    type = ServerEventType.timerEvent as const;
+    timerDelay: number; //delay in ms
+    event: ServerEvent;
+
+    constructor(timerDelay: number, event: ServerEvent) {
+        super();
+        this.timerDelay = timerDelay;
+        this.event = event;
+    }
+}
+
 export const UpdateEvent = (updates: Record<string, any>) => {
     return new _UpdateEvent(updates);
 }
@@ -139,4 +152,8 @@ export const CommonEventGroup = (events: ServerEvent[]) => {
 
 export const AnimationTriggerEvent = (method: AnimationMethod, controllerId: string, animatedPropKey: string) => {
     return new _AnimationTriggerEvent(method, controllerId, animatedPropKey);
+}
+
+export const TimerEvent = (timerDelay: number, event: ServerEvent) => {
+    return new _TimerEvent(timerDelay, event);
 }

@@ -39,6 +39,7 @@ enum DuitElementType {
   overflowBox = "OverflowBox",
   animatedSize = "AnimatedSize",
   animatedBuilder = "AnimatedBuilder",
+  intrinsicHeight = "IntrinsicHeight",
 }
 
 export default DuitElementType;

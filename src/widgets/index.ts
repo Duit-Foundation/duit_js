@@ -36,3 +36,4 @@ export * from "./transform.widget";
 export * from "./wrap.widget";
 export * from "./animated_size.widget";
 export * from "./animated_builder.widget";
+export * from "./intrinsic_height.widget";

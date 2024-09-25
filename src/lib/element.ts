@@ -30,7 +30,9 @@ export type DuitLayoutElement<T = any> =
     | Widgets.RepaintBoundaryUiElement
     | Widgets.AnimatedSizeUiElement
     | Widgets.AnimatedBuilderUiElement
-    | Widgets.RadioGroupContextUiElement;
+    | Widgets.RadioGroupContextUiElement
+    | Widgets.IntrinsicHeightUiElement
+    | Widgets.AnimatedBuilderUiElement;
 
 export type DuitElement<T = any> =
     Widgets.TextUiElement

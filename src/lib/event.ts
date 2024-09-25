@@ -9,7 +9,7 @@ enum ServerEventType {
     sequenced = "sequenced",
     grouped = "grouped",
     animationTrigger = "animationTrigger",
-    timerEvent = "timerEvent",
+    timer = "timer",
 }
 
 export abstract class ServerEvent {
@@ -111,7 +111,7 @@ class _AnimationTriggerEvent extends ServerEvent {
 }
 
 class _TimerEvent extends ServerEvent {
-    type = ServerEventType.timerEvent as const;
+    type = ServerEventType.timer as const;
     timerDelay: number; //delay in ms
     event: ServerEvent;
 

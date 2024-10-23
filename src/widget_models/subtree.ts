@@ -8,8 +8,9 @@ export class SubtreeUiElement extends SingleChildLayout {
   type = DuitElementType.subtree as const;
   attributes: DuitElement;
 
-  constructor(attrs: DuitElement, id?: string) {
+  constructor(attrs: DuitElement, id?: string, child?: DuitElement) {
     super(id, null, true);
     this.attributes = attrs;
+    this.child = child;
   }
 }

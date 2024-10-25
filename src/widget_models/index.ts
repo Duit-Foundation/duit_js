@@ -38,3 +38,4 @@ export * from "./overflow_box";
 export * from "./animated_size";
 export * from "./animated_builder";
 export * from "./intrinsic_height";
+export * from "./rotated_box";

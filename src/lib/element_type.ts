@@ -40,6 +40,7 @@ enum DuitElementType {
   animatedSize = "AnimatedSize",
   animatedBuilder = "AnimatedBuilder",
   intrinsicHeight = "IntrinsicHeight",
+  rotatedBox = "RotatedBox",
 }
 
 export default DuitElementType;

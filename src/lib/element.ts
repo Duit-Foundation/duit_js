@@ -33,7 +33,8 @@ export type DuitLayoutElement<T = any> =
     | Widgets.RadioGroupContextUiElement
     | Widgets.IntrinsicHeightUiElement
     | Widgets.AnimatedBuilderUiElement
-    | Widgets.RotatedBoxUiElement;
+    | Widgets.RotatedBoxUiElement 
+    | Widgets.ConstrainedBoxUiElement;
 
 export type DuitElement<T = any> =
     Widgets.TextUiElement

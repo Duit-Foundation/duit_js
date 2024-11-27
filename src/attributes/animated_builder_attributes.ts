@@ -1,4 +1,3 @@
-import type { BaseAction } from "../lib/action";
 import { Alignment, Border, Color, Curves, EdgeInsets, Size, BoxConstraints, BoxDecoration, TextStyle, AnimationTrigger, AnimationMethod } from "./properties";
 import { ValueReferenceHolder } from "./value_reference_holder";
 
@@ -15,7 +14,6 @@ abstract class TweenBase<T> {
     begin: T;
     end: T;
     reverseOnRepeat?: boolean;
-    onAnimationEnd?: BaseAction;
     trigger: AnimationTrigger;
     method: AnimationMethod;
 
@@ -28,7 +26,6 @@ abstract class TweenBase<T> {
         trigger?: AnimationTrigger,
         method?: AnimationMethod,
         reverseOnRepeat?: boolean,
-        onAnimationEnd?: BaseAction
     ) {
         this.animatedPropKey = animatedPropKey;
         this.curve = curve;
@@ -39,7 +36,6 @@ abstract class TweenBase<T> {
         this.reverseOnRepeat = false;
         this.trigger = trigger ?? AnimationTrigger.onEnter;
         this.method = method ?? AnimationMethod.forward;
-        this.onAnimationEnd = onAnimationEnd;
         reverseOnRepeat = reverseOnRepeat;
     }
 }
@@ -57,9 +53,8 @@ class Tween extends TweenBase<any> {
         trigger?: AnimationTrigger,
         method?: AnimationMethod,
         reverseOnRepeat?: boolean,
-        onAnimationEnd?: BaseAction
     ) {
-        super(animatedPropKey, duration, begin, end, curve, trigger, method, reverseOnRepeat, onAnimationEnd);
+        super(animatedPropKey, duration, begin, end, curve, trigger, method, reverseOnRepeat);
     }
 }
 
@@ -74,9 +69,8 @@ class ColorTween extends TweenBase<Color> {
         trigger?: AnimationTrigger,
         method?: AnimationMethod,
         reverseOnRepeat?: boolean,
-        onAnimationEnd?: BaseAction
     ) {
-        super(animatedPropKey, duration, begin, end, curve, trigger, method, reverseOnRepeat, onAnimationEnd);
+        super(animatedPropKey, duration, begin, end, curve, trigger, method, reverseOnRepeat);
     }
 }
 
@@ -91,9 +85,8 @@ class TextStyleTween extends TweenBase<TextStyle> {
         trigger?: AnimationTrigger,
         method?: AnimationMethod,
         reverseOnRepeat?: boolean,
-        onAnimationEnd?: BaseAction
     ) {
-        super(animatedPropKey, duration, begin, end, curve, trigger, method, reverseOnRepeat, onAnimationEnd);
+        super(animatedPropKey, duration, begin, end, curve, trigger, method, reverseOnRepeat);
     }
 }
 
@@ -108,9 +101,8 @@ class DecorationTween extends TweenBase<BoxDecoration> {
         trigger?: AnimationTrigger,
         method?: AnimationMethod,
         reverseOnRepeat?: boolean,
-        onAnimationEnd?: BaseAction
     ) {
-        super(animatedPropKey, duration, begin, end, curve, trigger, method, reverseOnRepeat, onAnimationEnd);
+        super(animatedPropKey, duration, begin, end, curve, trigger, method, reverseOnRepeat);
     }
 }
 
@@ -125,9 +117,8 @@ class AlignmentTween extends TweenBase<Alignment> {
         trigger?: AnimationTrigger,
         method?: AnimationMethod,
         reverseOnRepeat?: boolean,
-        onAnimationEnd?: BaseAction
     ) {
-        super(animatedPropKey, duration, begin, end, curve, trigger, method, reverseOnRepeat, onAnimationEnd);
+        super(animatedPropKey, duration, begin, end, curve, trigger, method, reverseOnRepeat);
     }
 }
 
@@ -142,9 +133,8 @@ class EdgeInsetsTween extends TweenBase<EdgeInsets> {
         trigger?: AnimationTrigger,
         method?: AnimationMethod,
         reverseOnRepeat?: boolean,
-        onAnimationEnd?: BaseAction
     ) {
-        super(animatedPropKey, duration, begin, end, curve, trigger, method, reverseOnRepeat, onAnimationEnd);
+        super(animatedPropKey, duration, begin, end, curve, trigger, method, reverseOnRepeat);
     }
 }
 
@@ -159,9 +149,8 @@ class BoxConstraintsTween extends TweenBase<BoxConstraints> {
         trigger?: AnimationTrigger,
         method?: AnimationMethod,
         reverseOnRepeat?: boolean,
-        onAnimationEnd?: BaseAction
     ) {
-        super(animatedPropKey, duration, begin, end, curve, trigger, method, reverseOnRepeat, onAnimationEnd);
+        super(animatedPropKey, duration, begin, end, curve, trigger, method, reverseOnRepeat);
     }
 }
 
@@ -176,9 +165,8 @@ class SizeTween extends TweenBase<Size> {
         trigger?: AnimationTrigger,
         method?: AnimationMethod,
         reverseOnRepeat?: boolean,
-        onAnimationEnd?: BaseAction
     ) {
-        super(animatedPropKey, duration, begin, end, curve, trigger, method, reverseOnRepeat, onAnimationEnd);
+        super(animatedPropKey, duration, begin, end, curve, trigger, method, reverseOnRepeat);
     }
 }
 
@@ -193,8 +181,7 @@ class BorderTween extends TweenBase<Border> {
         trigger?: AnimationTrigger,
         method?: AnimationMethod,
         reverseOnRepeat?: boolean,
-        onAnimationEnd?: BaseAction
     ) {
-        super(animatedPropKey, duration, begin, end, curve, trigger, method, reverseOnRepeat, onAnimationEnd);
+        super(animatedPropKey, duration, begin, end, curve, trigger, method, reverseOnRepeat);
     }
 }

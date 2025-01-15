@@ -42,6 +42,7 @@ enum DuitElementType {
   intrinsicHeight = "IntrinsicHeight",
   rotatedBox = "RotatedBox",
   constrainedBox = "ConstrainedBox",
+  backdropFilter = "BackdropFilter",
 }
 
 export default DuitElementType;

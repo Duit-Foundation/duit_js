@@ -39,3 +39,4 @@ export * from "./animated_builder.widget";
 export * from "./intrinsic_height.widget";
 export * from "./rotated_box.widget";
 export * from "./constrained_box.widget";
+export * from "./backdrop_filter.widget";

@@ -40,3 +40,4 @@ export * from "./animated_builder";
 export * from "./intrinsic_height";
 export * from "./rotated_box";
 export * from "./constrained_box";
+export * from "./backdrop_filter";

@@ -42,3 +42,5 @@ export * from "./decoration";
 export * from "./text_style";
 export * from "./trigger";
 export * from "./animation_method";
+export * from "./tile_mode";
+export * from "./image_filter";

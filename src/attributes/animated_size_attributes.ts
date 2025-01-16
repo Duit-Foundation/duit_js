@@ -1,9 +1,9 @@
-import { Clip, Alignment, Curves } from "./properties";
+import type { ImplicitAnimatable } from "../animations";
+import type { Clip, Alignment } from "./properties";
+import type { ValueReferenceHolder } from "./value_reference_holder";
 
-export interface AnimatedSizeAttributes {
-    duration: number;
+export interface AnimatedSizeAttributes extends ValueReferenceHolder<AnimatedSizeAttributes>, ImplicitAnimatable {
     reverseDuration?: number;
-    curve: keyof typeof Curves;
     clipBehabior?: keyof typeof Clip;
     alignment?: keyof typeof Alignment;
 }

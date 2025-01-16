@@ -43,6 +43,7 @@ enum DuitElementType {
   rotatedBox = "RotatedBox",
   constrainedBox = "ConstrainedBox",
   backdropFilter = "BackdropFilter",
+  animatedOpacity = "AnimatedOpacity",
 }
 
 export default DuitElementType;

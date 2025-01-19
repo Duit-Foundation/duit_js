@@ -98,7 +98,7 @@ class _ScriptAction extends BaseAction {
     }
 }
 
-export const HttpAction = (event: string, meta: HttpActionMetainfo, dependsOn: ActionDependency[] = []) => {
+export const HttpAction = (event: string, meta: HttpActionMetainfo, dependsOn?: ActionDependency[]) => {
     return new _HttpAction(event, meta, dependsOn);
 }
 

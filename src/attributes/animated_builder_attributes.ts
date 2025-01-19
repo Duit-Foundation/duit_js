@@ -22,7 +22,7 @@ abstract class TweenBase<T> {
         duration: number,
         begin: T,
         end: T,
-        curve: keyof typeof Curves,
+        curve?: keyof typeof Curves,
         trigger?: AnimationTrigger,
         method?: AnimationMethod,
         reverseOnRepeat?: boolean,
@@ -40,7 +40,36 @@ abstract class TweenBase<T> {
     }
 }
 
-type TweenDescription = Tween | ColorTween | TextStyleTween | BorderTween | EdgeInsetsTween | SizeTween | BoxConstraintsTween | DecorationTween | AlignmentTween;
+type TweenDescription = Tween | ColorTween | TextStyleTween | BorderTween | EdgeInsetsTween | SizeTween | BoxConstraintsTween | DecorationTween | AlignmentTween | TweenGroup;
+
+class TweenGroup {
+    type = "group" as const;
+    tweens: TweenDescription[];
+    groupId: string;
+    curve?: keyof typeof Curves;
+    trigger?: AnimationTrigger;
+    method?: AnimationMethod;
+    reverseOnRepeat?: boolean;
+    duration: number;
+
+    constructor(
+        tweens: TweenDescription[],
+        groupId: string,
+        duration: number,
+        curve?: keyof typeof Curves,
+        trigger?: AnimationTrigger,
+        method?: AnimationMethod,
+        reverseOnRepeat?: boolean,
+    ) {
+        this.tweens = tweens;
+        this.groupId = groupId;
+        this.curve = curve ?? Curves.linear;
+        this.trigger = trigger ?? AnimationTrigger.onEnter;
+        this.method = method ?? AnimationMethod.forward;
+        this.reverseOnRepeat = reverseOnRepeat;
+        this.duration = duration;
+    }
+}
 
 class Tween extends TweenBase<any> {
     type = "tween" as const;

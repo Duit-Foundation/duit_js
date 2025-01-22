@@ -69,6 +69,13 @@ export default class UIBuilder {
    * @return {string} A JSON string representation of the root object.
    */
   build(): string {
+    const content = {
+      "root": this.root
+    };
+    return JSON.stringify(content);
+  }
+
+  buidlUnwrapped(): string {
     return JSON.stringify(this.root);
   }
 

@@ -35,6 +35,7 @@ export type DuitLayoutElement<T = any> =
     | Widgets.AnimatedBuilderUiElement
     | Widgets.RotatedBoxUiElement
     | Widgets.ConstrainedBoxUiElement
+    | Widgets.SubtreeUiElement
     | Widgets.BackdropFilterUiElement
     | Widgets.AnimatedOpacityUiElement;
 
@@ -48,4 +49,5 @@ export type DuitElement<T = any> =
     | Widgets.ImageUiElement
     | Widgets.RichTextUiElement
     | Widgets.SwitchUiElement
+    | Widgets.CustomWidget<T>
     | DuitLayoutElement<T>;

@@ -6,6 +6,7 @@ import type { DuitElement, DuitLayoutElement } from "./element";
 
 export default class UIBuilder {
   private root?: DuitLayoutElement;
+  private widgets?: DuitElement[];
 
   /**
    * Creates a root element of the exact specified type and returns it.
@@ -88,5 +89,19 @@ export default class UIBuilder {
   rootFrom(rootElement: DuitLayoutElement): DuitLayoutElement {
     this.root = rootElement;
     return this.root;
+  }
+
+  addWidgets(widgets: DuitElement[]): void {
+    this.widgets = widgets;
+  }
+
+  buildMultiview(): string {
+    if (!this.widgets || this.widgets.length === 0) {
+      throw new Error("No widgets provided");
+    }
+
+    return JSON.stringify({
+      widgets: this.widgets,
+    });
   }
 }

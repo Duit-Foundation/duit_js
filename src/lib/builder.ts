@@ -2,11 +2,13 @@ import { CenterUiElement, ColoredBoxUiElement, ColumnUiElement, ExpandedUiElemen
 import DuitElementType from "./element_type";
 
 import type { DuitElement, DuitLayoutElement } from "./element";
+import type { _ComponentDescription } from "../widgets";
 
 
 export default class UIBuilder {
   private root?: DuitLayoutElement;
   private widgets?: DuitElement[];
+  private embedded?: _ComponentDescription[];
 
   /**
    * Creates a root element of the exact specified type and returns it.
@@ -71,12 +73,17 @@ export default class UIBuilder {
    */
   build(): string {
     const content = {
-      "root": this.root
+      "root": this.root,
+      "embedded": this.embedded
     };
     return JSON.stringify(content);
   }
 
   buidlUnwrapped(): string {
+    if (this.embedded != undefined) {
+      console.warn("Warning: The embedded field is not supported in unwrapped mode.");
+    }
+
     return JSON.stringify(this.root);
   }
 
@@ -101,7 +108,12 @@ export default class UIBuilder {
     }
 
     return JSON.stringify({
-      widgets: this.widgets,
+      "widgets": this.widgets,
+      "embedded": this.embedded
     });
+  }
+
+  addComponents(components: _ComponentDescription[]): void {
+    this.embedded = this.embedded?.concat(components);
   }
 }

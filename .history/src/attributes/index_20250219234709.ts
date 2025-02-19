@@ -11,6 +11,7 @@ export { PositionedAttributes } from "./positioned_attributes";
 export { CheckboxAttributes } from "./checkbox_attributes";
 export { ContainerAttributes } from "./container_attributes";
 export { ImageAttributes } from "./image_attributes";
+export { SafeAreaAttributes } from "./safe_area_attributes";
 export { GestureDetectorAttributes } from "./gesture_detector_attributes"
 export { AlignAttributes } from "./align_attributes";
 export { TransformAttributes } from "./transform_attributes";
@@ -35,7 +36,7 @@ export { RotatedBoxAttributes } from "./rotated_box_attributes";
 export { ConstrainedBoxAttributes } from "./constrained_box_attributes";
 export { BackdropFilterAttributes } from "./backdrop_filter_attributes";
 export { AnimatedOpacityAttributes } from "./animated_opacity_attributes";
-export { SafeAreaAttributes } from "./safe_area_attributes";
+
 export * from "./list_view_attributes";
 export { Ref, ValueReferenceHolder } from "./value_reference_holder";
 export * from "./properties/index";

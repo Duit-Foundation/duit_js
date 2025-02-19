@@ -1,4 +1,5 @@
 export { ColoredBoxAttributes } from "./colored_box_attributes";
+export { ColoredBoxAttributes } from "./colored_box_attributes";
 export { FlexAttributes } from "./flex_attributes";
 export { TextAttributes } from "./text_attributes";
 export { SizedBoxAttributes } from "./sized_box_attributes";
@@ -35,7 +36,6 @@ export { RotatedBoxAttributes } from "./rotated_box_attributes";
 export { ConstrainedBoxAttributes } from "./constrained_box_attributes";
 export { BackdropFilterAttributes } from "./backdrop_filter_attributes";
 export { AnimatedOpacityAttributes } from "./animated_opacity_attributes";
-export { SafeAreaAttributes } from "./safe_area_attributes";
 export * from "./list_view_attributes";
 export { Ref, ValueReferenceHolder } from "./value_reference_holder";
 export * from "./properties/index";

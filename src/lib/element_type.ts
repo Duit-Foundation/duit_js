@@ -45,6 +45,7 @@ enum DuitElementType {
   backdropFilter = "BackdropFilter",
   animatedOpacity = "AnimatedOpacity",
   safeArea = "SafeArea",
+  remoteSubtree = "RemoteSubtree",
 }
 
 export default DuitElementType;

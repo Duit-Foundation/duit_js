@@ -36,6 +36,7 @@ export { ConstrainedBoxAttributes } from "./constrained_box_attributes";
 export { BackdropFilterAttributes } from "./backdrop_filter_attributes";
 export { AnimatedOpacityAttributes } from "./animated_opacity_attributes";
 export { SafeAreaAttributes } from "./safe_area_attributes";
+export { RemoteSubtreeAttributes } from "./remote_subtree_attributes";
 export * from "./list_view_attributes";
 export { Ref, ValueReferenceHolder } from "./value_reference_holder";
 export * from "./properties/index";

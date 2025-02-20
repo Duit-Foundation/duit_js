@@ -5,7 +5,7 @@ import type { RepaintBoundaryAttributes } from "../attributes";
 import type { DuitElement } from "../lib/element";
 
 export class RepaintBoundaryUiElement extends SingleChildLayout {
-  type = DuitElementType.sizedBox as const;
+  type = DuitElementType.repaintBoundary as const;
   attributes: RepaintBoundaryAttributes;
 
   constructor(attrs: RepaintBoundaryAttributes, id?: string, controlled?: boolean, child?: DuitElement) {

@@ -43,3 +43,4 @@ export * from "./constrained_box";
 export * from "./backdrop_filter";
 export * from "./animated_opacity";
 export * from "./safe_area";
+export * from "./remote_subtree";

@@ -38,7 +38,8 @@ export type DuitLayoutElement<T = any> =
     | Widgets.SubtreeUiElement
     | Widgets.BackdropFilterUiElement
     | Widgets.AnimatedOpacityUiElement
-    | Widgets.SafeAreaUiElement;
+    | Widgets.SafeAreaUiElement
+    | Widgets.RemoteSubtreeUiElement;
 
 export type DuitElement<T = any> =
     Widgets.TextUiElement

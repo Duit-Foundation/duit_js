@@ -19,7 +19,7 @@ interface Script {
  * Represents an actions dependency.
  * @interface ActionDependency
  */
-interface ActionDependency {
+export interface ActionDependency {
     id: ID;
     target: string;
 }

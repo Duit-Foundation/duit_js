@@ -37,7 +37,8 @@ export type DuitLayoutElement<T = any> =
     | Widgets.ConstrainedBoxUiElement
     | Widgets.SubtreeUiElement
     | Widgets.BackdropFilterUiElement
-    | Widgets.AnimatedOpacityUiElement;
+    | Widgets.AnimatedOpacityUiElement
+    | Widgets.SafeAreaUiElement;
 
 export type DuitElement<T = any> =
     Widgets.TextUiElement

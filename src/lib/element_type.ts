@@ -44,6 +44,7 @@ enum DuitElementType {
   constrainedBox = "ConstrainedBox",
   backdropFilter = "BackdropFilter",
   animatedOpacity = "AnimatedOpacity",
+  safeArea = "SafeArea",
 }
 
 export default DuitElementType;

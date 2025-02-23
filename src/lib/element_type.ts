@@ -40,6 +40,7 @@ enum DuitElementType {
   animatedSize = "AnimatedSize",
   animatedBuilder = "AnimatedBuilder",
   intrinsicHeight = "IntrinsicHeight",
+  intrinsicWidth = "IntrinsicWidth",
   rotatedBox = "RotatedBox",
   constrainedBox = "ConstrainedBox",
   backdropFilter = "BackdropFilter",

@@ -38,6 +38,7 @@ export * from "./overflow_box";
 export * from "./animated_size";
 export * from "./animated_builder";
 export * from "./intrinsic_height";
+export * from "./intrinsic_width";
 export * from "./rotated_box";
 export * from "./constrained_box";
 export * from "./backdrop_filter";

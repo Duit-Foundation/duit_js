@@ -37,6 +37,7 @@ export * from "./wrap.widget";
 export * from "./animated_size.widget";
 export * from "./animated_builder.widget";
 export * from "./intrinsic_height.widget";
+export * from "./intrinsic_width.widget";
 export * from "./rotated_box.widget";
 export * from "./constrained_box.widget";
 export * from "./backdrop_filter.widget";

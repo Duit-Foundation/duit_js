@@ -31,6 +31,7 @@ export { OverflowBoxAttributes } from "./overflow_box_attributes";
 export { AnimatedSizeAttributes } from "./animated_size_attributes";
 export { AnimatedBuilderAttributes } from "./animated_builder_attributes";
 export { IntrinsicHeightAttributes } from "./intrinsic_height_attributes";
+export { IntrinsicWidthAttributes } from "./intrinsic_width_attributes";
 export { RotatedBoxAttributes } from "./rotated_box_attributes";
 export { ConstrainedBoxAttributes } from "./constrained_box_attributes";
 export { BackdropFilterAttributes } from "./backdrop_filter_attributes";

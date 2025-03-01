@@ -1,9 +1,10 @@
-import { AnimatedPropertyOwner } from "../animations";
-import { OverflowBoxFit } from "./properties";
-import { Alignment } from "./properties/alignment";
-import { ValueReferenceHolder } from "./value_reference_holder";
+import type { AnimatedPropertyOwner } from "../animations";
+import type { OverflowBoxFit } from "./properties";
+import type { Alignment } from "./properties/alignment";
+import type { ValueReferenceHolder } from "./value_reference_holder";
+import type { ThemeConsumer } from "./theme";
 
-export interface OverflowBoxAttributes extends ValueReferenceHolder<OverflowBoxAttributes>, AnimatedPropertyOwner {
+export interface OverflowBoxAttributes extends ValueReferenceHolder<OverflowBoxAttributes>, AnimatedPropertyOwner, ThemeConsumer {
     maxWidth?: number;
     minHeight?: number;
     maxHeight?: number;

@@ -2,8 +2,9 @@ import type { BaseAction } from "../lib/action"
 import type { Color, SliderInteraction } from "./properties";
 import type { MaterialStateProperty } from "./properties/material_state";
 import type { ValueReferenceHolder } from "./value_reference_holder"
+import type { ThemeConsumer } from "./theme";
 
-export interface SliderAttributes extends ValueReferenceHolder<SliderAttributes> {
+export interface SliderAttributes extends ValueReferenceHolder<SliderAttributes>, ThemeConsumer {
     value: number;
     min?: number;
     max?: number;

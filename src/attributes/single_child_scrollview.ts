@@ -1,7 +1,8 @@
 import type { Axis, Clip, DragStartBehavior, ScrollPhysics, ScrollViewKeyboardDismissBehavior, EdgeInsets } from "./properties"
-import { ValueReferenceHolder } from "./value_reference_holder";
+import type { ValueReferenceHolder } from "./value_reference_holder";
+import type { ThemeConsumer } from "./theme";
 
-export interface SingleChildScrollViewAttributes extends ValueReferenceHolder<SingleChildScrollViewAttributes> {
+export interface SingleChildScrollViewAttributes extends ValueReferenceHolder<SingleChildScrollViewAttributes>, ThemeConsumer {
     scrollDirection?: keyof typeof Axis;
     reverse?: boolean;
     padding?: EdgeInsets;

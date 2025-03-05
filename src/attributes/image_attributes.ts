@@ -6,9 +6,10 @@ import type { FilterQuality } from "./properties/filter_quality";
 import type { ImageRepeat } from "./properties/image_repeat";
 import type { ImageType } from "./properties/image_type";
 import type { ValueReferenceHolder } from "./value_reference_holder";
-import { AnimatedPropertyOwner } from "../animations";
+import type { AnimatedPropertyOwner } from "../animations";
+import type { ThemeConsumer } from "./theme";
 
-export interface ImageAttributes extends ValueReferenceHolder<ImageAttributes>, AnimatedPropertyOwner {
+export interface ImageAttributes extends ValueReferenceHolder<ImageAttributes>, AnimatedPropertyOwner, ThemeConsumer {
     width?: number;
     height?: number;
     cacheWidth?: number;

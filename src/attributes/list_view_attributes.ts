@@ -1,4 +1,5 @@
 import { ComponentUiElement } from "../widget_models";
+import { Builder } from "./builder";
 import { Axis, EdgeInsets, DragStartBehavior, ScrollViewKeyboardDismissBehavior, Clip, MergeStrategy, ScrollPhysics, ListKind } from "./properties";
 
 export interface ListView {
@@ -22,11 +23,7 @@ export interface ListView {
     anchor?: number;
 }
 
-export interface ListViewBuilderAttributes extends ListView {
-    childObjects: ComponentUiElement[];
-    mergeStrategy?: keyof typeof MergeStrategy;
-    scrollEndReachedThreshold?: number;
-}
+export interface ListViewBuilderAttributes extends ListView, Builder { }
 
 export interface ListViewSeparatedAttributes extends ListViewBuilderAttributes {
     separator: ComponentUiElement;

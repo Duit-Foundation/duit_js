@@ -3,11 +3,7 @@ import type { Axis, Clip, DragStartBehavior, EdgeInsets, GridConstructor, Scroll
 import type { ThemeConsumer } from "./theme";
 import type { ValueReferenceHolder } from "./value_reference_holder";
 
-interface GridViewBaseAttributes extends ValueReferenceHolder<GridViewBaseAttributes>, ThemeConsumer {
-    constructor: keyof typeof GridConstructor;
-}
-
-interface DefaultGridAttributes {
+interface DefaultGridAttributes<T> extends ValueReferenceHolder<T>, ThemeConsumer {
     scrollDirection?: keyof typeof Axis;
     reverse?: boolean;
     primary?: boolean;
@@ -25,14 +21,14 @@ interface DefaultGridAttributes {
     physics?: keyof typeof ScrollPhysics;
 }
 
-interface GridViewCommonAttributes extends DefaultGridAttributes {
+interface GridViewCommonAttributes extends DefaultGridAttributes<GridViewCommonAttributes> {
     constructor: GridConstructor.common;
     sliverGridDelegateKey: string;
     sliverGridDelegateOptions?: Record<string, any>;
 
 }
 
-interface GridViewCountAttributes extends DefaultGridAttributes {
+interface GridViewCountAttributes extends DefaultGridAttributes<GridViewCountAttributes> {
     constructor: GridConstructor.count;
     crossAxisCount: number;
     mainAxisSpacing?: number;
@@ -40,13 +36,13 @@ interface GridViewCountAttributes extends DefaultGridAttributes {
     childAspectRatio?: number;
 }
 
-interface GridViewBuilderAttributes extends DefaultGridAttributes, Builder {
+interface GridViewBuilderAttributes extends DefaultGridAttributes<GridViewBuilderAttributes>, Builder {
     constructor: GridConstructor.builder;
     sliverGridDelegateKey: string;
     sliverGridDelegateOptions?: Record<string, any>;
 }
 
-interface GridViewExtentAttributes extends DefaultGridAttributes {
+interface GridViewExtentAttributes extends DefaultGridAttributes<GridViewExtentAttributes> {
     constructor: GridConstructor.extent;
     maxCrossAxisExtent: number;
     mainAxisSpacing?: number;

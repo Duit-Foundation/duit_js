@@ -44,3 +44,4 @@ export * from "./trigger";
 export * from "./animation_method";
 export * from "./tile_mode";
 export * from "./image_filter";
+export * from "./grid_constructor";

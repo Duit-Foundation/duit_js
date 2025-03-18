@@ -47,6 +47,7 @@ enum DuitElementType {
   animatedOpacity = "AnimatedOpacity",
   safeArea = "SafeArea",
   remoteSubtree = "RemoteSubtree",
+  gridView = "GridView",
 }
 
 export default DuitElementType;

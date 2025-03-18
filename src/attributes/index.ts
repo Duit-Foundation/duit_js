@@ -40,6 +40,7 @@ export { SafeAreaAttributes } from "./safe_area_attributes";
 export { RemoteSubtreeAttributes } from "./remote_subtree_attributes";
 export { ListViewAttributes } from "./list_view_attributes";
 export { DecoratedBoxAttributes } from "./decorated_box_attributes";
+export { GridViewAttributes } from "./grid_view_attributes";
 export * from "./theme";
 export * from "./list_view_attributes";
 export { Ref, ValueReferenceHolder } from "./value_reference_holder";

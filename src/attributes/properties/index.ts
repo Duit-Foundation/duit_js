@@ -45,3 +45,5 @@ export * from "./animation_method";
 export * from "./tile_mode";
 export * from "./image_filter";
 export * from "./grid_constructor";
+export * from "./border_radius";
+export * from "./shape_border";

@@ -45,3 +45,4 @@ export * from "./animated_opacity.widget";
 export * from "./safe_area.widget";
 export * from "./remote_subtree.widget";
 export * from "./grid_view.widget";
+export * from "./card.widget";

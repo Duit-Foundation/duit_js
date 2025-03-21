@@ -48,6 +48,7 @@ enum DuitElementType {
   safeArea = "SafeArea",
   remoteSubtree = "RemoteSubtree",
   gridView = "GridView",
+  card = "Card",
 }
 
 export default DuitElementType;

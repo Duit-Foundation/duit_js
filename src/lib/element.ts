@@ -41,6 +41,7 @@ export type DuitLayoutElement<T = any> =
     | Widgets.AnimatedOpacityUiElement
     | Widgets.SafeAreaUiElement
     | Widgets.GridViewUiElement
+    | Widgets.CardUiElement
     | Widgets.RemoteSubtreeUiElement;
 
 export type DuitElement<T = any> =

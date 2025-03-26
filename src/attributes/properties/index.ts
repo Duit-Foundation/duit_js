@@ -47,3 +47,4 @@ export * from "./image_filter";
 export * from "./grid_constructor";
 export * from "./border_radius";
 export * from "./shape_border";
+export * from "./fab_location";

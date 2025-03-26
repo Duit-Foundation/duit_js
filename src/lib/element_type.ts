@@ -50,6 +50,7 @@ enum DuitElementType {
   gridView = "GridView",
   card = "Card",
   appBar = "AppBar",
+  scaffold = "Scaffold",
 }
 
 export default DuitElementType;

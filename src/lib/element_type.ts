@@ -49,6 +49,7 @@ enum DuitElementType {
   remoteSubtree = "RemoteSubtree",
   gridView = "GridView",
   card = "Card",
+  appBar = "AppBar",
 }
 
 export default DuitElementType;

@@ -51,6 +51,7 @@ enum DuitElementType {
   card = "Card",
   appBar = "AppBar",
   scaffold = "Scaffold",
+  inkWell = "InkWell"
 }
 
 export default DuitElementType;

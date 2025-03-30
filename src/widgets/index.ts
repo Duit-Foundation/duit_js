@@ -48,3 +48,4 @@ export * from "./grid_view.widget";
 export * from "./card.widget";
 export * from "./app_bar.widget";
 export * from "./scaffold.widget";
+export * from "./inkwell.widget";

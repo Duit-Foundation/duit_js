@@ -43,6 +43,7 @@ export type DuitLayoutElement<T = any> =
     | Widgets.GridViewUiElement
     | Widgets.CardUiElement
     | Widgets.InkWellUiElement
+    | Widgets.CarouselViewUiElement
     | Widgets.RemoteSubtreeUiElement;
 
 export type DuitElement<T = any> =

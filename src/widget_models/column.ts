@@ -2,7 +2,6 @@ import { MultiChildLayout } from "./child";
 import DuitElementType from "../lib/element_type";
 
 import type { FlexAttributes } from "../attributes";
-import type { BaseProps } from "./props";
 import type { DuitElement } from "../lib/element";
 
 export class ColumnUiElement extends MultiChildLayout {

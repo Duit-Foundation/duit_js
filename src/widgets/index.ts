@@ -49,3 +49,4 @@ export * from "./card.widget";
 export * from "./app_bar.widget";
 export * from "./scaffold.widget";
 export * from "./inkwell.widget";
+export * from "./carousel_view.widget";

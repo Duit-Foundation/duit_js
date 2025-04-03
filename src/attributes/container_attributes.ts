@@ -5,10 +5,10 @@ import type { BoxConstraints } from "./properties/box_constraits"
 import type { Clip } from "./properties/clip"
 import type { BoxDecoration } from "./properties/decoration"
 import type { ValueReferenceHolder } from "./value_reference_holder"
-import type { AnimatedPropertyOwner } from "../animations"
+import type { AnimatedPropertyOwner, ImplicitAnimatable } from "../animations"
 import type { ThemeConsumer } from "./theme";
 
-export interface ContainerAttributes extends ValueReferenceHolder<ContainerAttributes>, AnimatedPropertyOwner, ThemeConsumer {
+interface ContainerProps {
     constraints?: BoxConstraints
     padding?: EdgeInsets
     margin?: EdgeInsets
@@ -21,3 +21,7 @@ export interface ContainerAttributes extends ValueReferenceHolder<ContainerAttri
     height?: number
     clipBehavior?: keyof typeof Clip;
 }
+
+export interface ContainerAttributes extends ValueReferenceHolder<ContainerAttributes>, AnimatedPropertyOwner, ThemeConsumer, ContainerProps { }
+
+export interface AnimatedContainerAttributes extends ValueReferenceHolder<AnimatedContainerAttributes>, ImplicitAnimatable, ThemeConsumer, ContainerProps { }

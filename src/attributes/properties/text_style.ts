@@ -11,8 +11,8 @@ export interface TextStyle {
     letterSpacing?: number;
     wordSpacing?: number;
     height?: number;
-    decoration?: TextDecoration;
-    decorationStyle?: TextDecorationStyle;
+    decoration?: keyof typeof TextDecoration;
+    decorationStyle?: keyof typeof TextDecorationStyle;
     decorationColor?: Color;
     decorationThickness?: number;
 }

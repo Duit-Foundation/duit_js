@@ -53,3 +53,5 @@ export * from "./stack_fit";
 export * from "./border_radius";
 export * from "./border";
 export * from "./grid_constructor";
+export * from "./text_decoration";
+export * from "./text_decoration_style";

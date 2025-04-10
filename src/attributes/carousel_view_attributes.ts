@@ -1,5 +1,5 @@
 import { AnimatedPropertyOwner } from "../animations";
-import { Axis, Color, EdgeInsets, GridConstructor, ShapeBorder } from "./properties";
+import { Axis, CarouselConstructor, Color, EdgeInsets, GridConstructor, ShapeBorder } from "./properties";
 import { MaterialStateProperty } from "./properties/material_state";
 import { ThemeConsumer } from "./theme";
 import { ValueReferenceHolder } from "./value_reference_holder";
@@ -18,5 +18,5 @@ export interface CarouselViewAttributes extends ValueReferenceHolder<CarouselVie
     itemSnapping?: boolean;
     consumeMaxWeight?: boolean;
     flexWeights?: number[];
-    constructor: keyof typeof GridConstructor;
+    constructor: keyof typeof CarouselConstructor;
 }

@@ -46,6 +46,8 @@ export { AppBarAttributes } from "./app_bar_attributes";
 export { ScaffoldAttributes } from "./scaffold_attributes";
 export { InkwellAttributes } from "./inkwell_attributes";
 export { CarouselViewAttributes } from "./carousel_view_attributes";
+export { ThemeConsumer } from "./theme";
+export { } from "./animated_align_attributes"
 export * from "./theme";
 export * from "./list_view_attributes";
 export { Ref, ValueReferenceHolder } from "./value_reference_holder";

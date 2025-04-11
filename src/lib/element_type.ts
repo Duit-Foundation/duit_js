@@ -54,6 +54,7 @@ enum DuitElementType {
   inkWell = "InkWell",
   carouselView = "CarouselView",
   animatedContainer = "AnimatedContainer",
+  animatedAlign = "AnimatedAlign",
 }
 
 export default DuitElementType;

@@ -54,3 +54,4 @@ export * from "./carousel_view";
 export * from "./list_view";
 export * from "./animated_container";
 export * from "./animated_align";
+export * from "./animated_rotation";

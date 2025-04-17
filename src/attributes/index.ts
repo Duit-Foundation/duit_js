@@ -46,6 +46,8 @@ export { AppBarAttributes } from "./app_bar_attributes";
 export { ScaffoldAttributes } from "./scaffold_attributes";
 export { InkwellAttributes } from "./inkwell_attributes";
 export { CarouselViewAttributes } from "./carousel_view_attributes";
+export { AnimatedAlignAttributes } from "./animated_align_attributes";
+export { AnimatedRotationAttributes } from "./animated_rotation_attributes";
 export { ThemeConsumer } from "./theme";
 export { } from "./animated_align_attributes"
 export * from "./theme";

@@ -53,3 +53,4 @@ export * from "./carousel_view.widget";
 export * from "./animated_container.widget";
 export * from "./animated_align.widget";
 export * from "./animated_rotation.widget";
+export * from "./animated_padding.widget";

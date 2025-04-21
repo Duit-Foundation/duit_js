@@ -48,6 +48,7 @@ export { InkwellAttributes } from "./inkwell_attributes";
 export { CarouselViewAttributes } from "./carousel_view_attributes";
 export { AnimatedAlignAttributes } from "./animated_align_attributes";
 export { AnimatedRotationAttributes } from "./animated_rotation_attributes";
+export { AnimatedPaddingAttributes } from "./animated_padding_attributes";
 export { ThemeConsumer } from "./theme";
 export { } from "./animated_align_attributes"
 export * from "./theme";

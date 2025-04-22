@@ -57,6 +57,7 @@ enum DuitElementType {
   animatedAlign = "AnimatedAlign",
   animatedRotation = "AnimatedRotation",
   animatedPadding = "AnimatedPadding",
+  animatedPositioned = "AnimatedPositioned",
 }
 
 export default DuitElementType;

@@ -7,7 +7,7 @@ export { ElevatedButtonAttributes } from "./elevated_button_attributes";
 export { TextFieldAttributes } from "./text_field_attributes";
 export { ExpandedAttributes } from "./expanded_attributes";
 export { PaddingAttributes } from "./padding_attributes";
-export { PositionedAttributes } from "./positioned_attributes";
+export { PositionedAttributes, AnimatedPositionedAttributes } from "./positioned_attributes";
 export { CheckboxAttributes } from "./checkbox_attributes";
 export { ContainerAttributes, AnimatedContainerAttributes } from "./container_attributes";
 export { ImageAttributes } from "./image_attributes";

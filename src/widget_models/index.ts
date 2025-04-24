@@ -57,3 +57,4 @@ export * from "./animated_align";
 export * from "./animated_rotation";
 export * from "./animated_padding";
 export * from "./animated_positioned";
+export * from "./animated_scale";

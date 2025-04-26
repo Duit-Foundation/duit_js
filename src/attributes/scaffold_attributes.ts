@@ -4,7 +4,6 @@ import { ThemeConsumer } from "./theme";
 import { ValueReferenceHolder } from "./value_reference_holder";
 
 export interface ScaffoldAttributes extends ValueReferenceHolder<ScaffoldAttributes>, ThemeConsumer {
-    body?: DuitElement;
     bottomSheet?: DuitElement;
     appBar?: DuitElement;
     floatingActionButton?: DuitElement;

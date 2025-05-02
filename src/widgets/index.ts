@@ -55,3 +55,6 @@ export * from "./animated_align.widget";
 export * from "./animated_rotation.widget";
 export * from "./animated_padding.widget";
 export * from "./animated_positioned.widget";
+export * from "./animated_scale.widget";
+export * from "./custom_scroll_view.widget";
+export * from "./sliver_padding.widget";

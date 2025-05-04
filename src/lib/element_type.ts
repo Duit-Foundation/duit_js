@@ -59,6 +59,8 @@ enum DuitElementType {
   animatedPadding = "AnimatedPadding",
   animatedPositioned = "AnimatedPositioned",
   animatedScale = "AnimatedScale",
+  customScrollView = "CustomScrollView",
+  sliverPadding = "SliverPadding",
 }
 
 export default DuitElementType;

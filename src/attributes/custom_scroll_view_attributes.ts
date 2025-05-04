@@ -16,4 +16,5 @@ export interface CustomScrollViewAttributes extends ValueReferenceHolder<CustomS
     restorationId?: string;
     clipBehavior?: keyof typeof Clip;
     anchor?: number;
+    center?: string;
 }

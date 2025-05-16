@@ -61,4 +61,5 @@ export * from "./animated_scale";
 export * from "./custom_scroll_view";
 export * from "./sliver_padding";
 export * from "./sliver_fill_remaining";
+export * from "./sliver_to_box_adapter";
 export * from "./sliver_fill_viewport";

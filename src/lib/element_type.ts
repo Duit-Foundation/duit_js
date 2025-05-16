@@ -62,6 +62,7 @@ enum DuitElementType {
   customScrollView = "CustomScrollView",
   sliverPadding = "SliverPadding",
   sliverFillRemaining = "SliverFillRemaining",
+  sliverFillViewport = "SliverFillViewport",
 }
 
 export default DuitElementType;

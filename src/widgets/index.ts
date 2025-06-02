@@ -55,3 +55,4 @@ export * from "./animated_align.widget";
 export * from "./animated_rotation.widget";
 export * from "./animated_padding.widget";
 export * from "./animated_positioned.widget";
+export * from "./offstage.widget";

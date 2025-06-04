@@ -51,6 +51,7 @@ export { AnimatedRotationAttributes } from "./animated_rotation_attributes";
 export { AnimatedPaddingAttributes } from "./animated_padding_attributes";
 export { AnimatedScaleAttributes } from "./animated_scale_attributes";
 export { AbsorbPointerAttributes } from "./absorb_pointer_attributes";
+export { OffstageAttributes } from "./offstage_attributes";
 export { ThemeConsumer } from "./theme";
 export { } from "./animated_align_attributes"
 export * from "./theme";

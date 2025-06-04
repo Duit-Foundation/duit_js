@@ -59,3 +59,4 @@ export * from "./animated_padding";
 export * from "./animated_positioned";
 export * from "./animated_scale";
 export * from "./absorb_pointer";
+export * from "./offstage";

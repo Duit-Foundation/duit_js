@@ -60,6 +60,7 @@ enum DuitElementType {
   animatedPositioned = "AnimatedPositioned",
   animatedScale = "AnimatedScale",
   absorbPointer = "AbsorbPointer",
+  offstage = "Offstage",
 }
 
 export default DuitElementType;

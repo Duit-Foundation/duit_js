@@ -54,6 +54,7 @@ export { SliverPaddingAttributes } from "./sliver_padding_attributes";
 export { CustomScrollViewAttributes } from "./custom_scroll_view_attributes";
 export { SliverFillRemaningAttributes } from "./sliver_fill_remaining_attributes";
 export { SliverFillViewportAttributes } from "./sliver_fill_viewport_attributes";
+export { SliverOpacityAttributes } from "./sliver_opacity_attributes";
 export { ThemeConsumer } from "./theme";
 export * from "./theme";
 export * from "./list_view_attributes";

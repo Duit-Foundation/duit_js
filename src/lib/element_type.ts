@@ -65,7 +65,6 @@ enum DuitElementType {
   sliverToBoxAdapter = "SliverToBoxAdapter",
   sliverFillViewport = "SliverFillViewport",
   sliverOpacity = "SliverOpacity",
-  sliverVisibility = "SliverVisibility",
 }
 
 export default DuitElementType;

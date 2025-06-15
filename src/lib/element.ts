@@ -51,6 +51,7 @@ export type DuitLayoutElement<T = any> =
     | Widgets.AnimatedScaleUiElement
     | Widgets.RemoteSubtreeUiElement
     | Widgets.AbsorbPointerUiElement
+    | Widgets.AnimatedCrossFadeUiElement
     | Widgets.OffstageUiElement;
 
 export type DuitElement<T = any> =

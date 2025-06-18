@@ -56,6 +56,8 @@ export type DuitLayoutElement<T = any> =
     | Widgets.SliverFillViewportUIElement
     | Widgets.SliverOpacityUiElement
     | Widgets.SliverIgnorePointerUiElement
+    | Widgets.SliverVisibilityUiElement
+    | Widgets.SliverAnimatedOpacityUiElement
     | Widgets.RemoteSubtreeUiElement;
 
 export type DuitElement<T = any> =

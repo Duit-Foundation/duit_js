@@ -64,3 +64,4 @@ export * from "./sliver_fill_viewport.widget";
 export * from "./sliver_opacity.widget";
 export * from "./sliver_visibility.widget";
 export * from "./sliver_animated_opacity.widget";
+export * from "./sliver_safe_area.widget";

@@ -57,6 +57,7 @@ export { SliverFillViewportAttributes } from "./sliver_fill_viewport_attributes"
 export { SliverOpacityAttributes } from "./sliver_opacity_attributes";
 export { SliverVisibilityAttributes } from "./sliver_visibility_attributes";
 export { SliverAnimatedOpacityAttributes } from "./sliver_animated_opacity_attributes";
+export { SliverSafeAreaAttributes } from "./sliver_safe_area_attributes";
 export { ThemeConsumer } from "./theme";
 export * from "./theme";
 export * from "./list_view_attributes";

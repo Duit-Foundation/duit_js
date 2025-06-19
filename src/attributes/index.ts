@@ -62,4 +62,5 @@ export * from "./theme";
 export * from "./list_view_attributes";
 export { Ref, ValueReferenceHolder } from "./value_reference_holder";
 export * from "./properties/index";
-export type { SliverOffstageAttributes } from "./sliver_offstage_attributes";
+export { SliverOffstageAttributes } from "./sliver_offstage_attributes";
+export { SliverIgnorePointerAttributes } from "./sliver_ignore_pointer_attributes";

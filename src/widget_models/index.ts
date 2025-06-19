@@ -64,6 +64,7 @@ export * from "./sliver_fill_remaining";
 export * from "./sliver_to_box_adapter";
 export * from "./sliver_fill_viewport";
 export * from "./sliver_opacity";
+export * from "./sliver_offstage";
 export * from "./sliver_ignore_pointer";
 export * from "./sliver_visibility";
 export * from "./sliver_animated_opacity";

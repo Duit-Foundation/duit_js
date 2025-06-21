@@ -53,6 +53,7 @@ export { AnimatedScaleAttributes } from "./animated_scale_attributes";
 export { AbsorbPointerAttributes } from "./absorb_pointer_attributes";
 export { OffstageAttributes } from "./offstage_attributes";
 export { AnimatedCrossFadeAttributes } from "./animated_cross_fade_attributes";
+export { PhysicalModelAttributes, AnimatedPhysicalModelAttributes } from "./physical_model_attributes";
 export { ThemeConsumer } from "./theme";
 export { } from "./animated_align_attributes"
 export * from "./theme";

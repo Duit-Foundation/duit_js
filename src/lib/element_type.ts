@@ -62,6 +62,8 @@ enum DuitElementType {
   absorbPointer = "AbsorbPointer",
   offstage = "Offstage",
   animatedCrossFade = "AnimatedCrossFade",
+  physicalModel = "PhysicalModel",
+  animatedPhysicalModel = "AnimatedPhysicalModel",
 }
 
 export default DuitElementType;

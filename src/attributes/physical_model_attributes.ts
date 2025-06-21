@@ -16,4 +16,7 @@ interface PhysicalModelProps {
 
 export interface PhysicalModelAttributes extends ValueReferenceHolder<PhysicalModelAttributes>, AnimatedPropertyOwner, ThemeConsumer, PhysicalModelProps { }
 
-export interface AnimatedPhysicalModelAttributes extends ValueReferenceHolder<AnimatedPhysicalModelAttributes>, ImplicitAnimatable, ThemeConsumer, PhysicalModelProps { } 
+export interface AnimatedPhysicalModelAttributes extends ValueReferenceHolder<AnimatedPhysicalModelAttributes>, ImplicitAnimatable, ThemeConsumer, PhysicalModelProps {
+    animateColor?: boolean
+    animateShadowColor?: boolean
+} 

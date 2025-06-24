@@ -67,3 +67,4 @@ export * from "./sliver_ignore_pointer.widget";
 export * from "./sliver_visibility.widget";
 export * from "./sliver_animated_opacity.widget";
 export * from "./sliver_safe_area.widget";
+export * from "./sliver_list.widget";

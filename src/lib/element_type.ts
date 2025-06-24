@@ -72,6 +72,7 @@ enum DuitElementType {
   sliverSafeArea = "SliverSafeArea",
   sliverAppBar = "SliverAppBar",
   flexibleSpaceBar = "FlexibleSpaceBar",
+  sliverList = "SliverList",
 }
 
 export default DuitElementType;

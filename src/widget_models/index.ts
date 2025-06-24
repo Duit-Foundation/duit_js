@@ -69,3 +69,5 @@ export * from "./sliver_ignore_pointer";
 export * from "./sliver_visibility";
 export * from "./sliver_animated_opacity";
 export * from "./sliver_safe_area";
+export * from "./sliver_app_bar";
+export * from "./flexible_space_bar";

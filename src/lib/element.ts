@@ -60,6 +60,8 @@ export type DuitLayoutElement<T = any> =
     | Widgets.SliverVisibilityUiElement
     | Widgets.SliverAnimatedOpacityUiElement
     | Widgets.SliverSafeAreaUiElement
+    | Widgets.SliverAppBarUiElement
+    | Widgets.FlexibleSpaceBarUiElement
     | Widgets.SliverListUiElement
     | Widgets.RemoteSubtreeUiElement;
 

@@ -70,6 +70,8 @@ enum DuitElementType {
   sliverVisibility = "SliverVisibility",
   sliverAnimatedOpacity = "SliverAnimatedOpacity",
   sliverSafeArea = "SliverSafeArea",
+  sliverAppBar = "SliverAppBar",
+  flexibleSpaceBar = "FlexibleSpaceBar",
   sliverList = "SliverList",
 }
 

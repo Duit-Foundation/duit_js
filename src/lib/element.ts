@@ -49,6 +49,7 @@ export type DuitLayoutElement<T = any> =
     | Widgets.AnimatedPaddingUiElement
     | Widgets.AnimatedPositionedUiElement
     | Widgets.AnimatedScaleUiElement
+    | Widgets.AnimatedSlideUiElement
     | Widgets.RemoteSubtreeUiElement
     | Widgets.AbsorbPointerUiElement
     | Widgets.AnimatedCrossFadeUiElement

@@ -59,6 +59,7 @@ enum DuitElementType {
   animatedPadding = "AnimatedPadding",
   animatedPositioned = "AnimatedPositioned",
   animatedScale = "AnimatedScale",
+  animatedSlide = "AnimatedSlide",
   absorbPointer = "AbsorbPointer",
   offstage = "Offstage",
   animatedCrossFade = "AnimatedCrossFade",

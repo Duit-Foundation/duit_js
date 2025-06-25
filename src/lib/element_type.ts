@@ -74,6 +74,12 @@ enum DuitElementType {
   flexibleSpaceBar = "FlexibleSpaceBar",
   sliverList = "SliverList",
   sliverGrid = "SliverGrid",
+  animatedSlide = "AnimatedSlide",
+  absorbPointer = "AbsorbPointer",
+  offstage = "Offstage",
+  animatedCrossFade = "AnimatedCrossFade",
+  physicalModel = "PhysicalModel",
+  animatedPhysicalModel = "AnimatedPhysicalModel",
 }
 
 export default DuitElementType;

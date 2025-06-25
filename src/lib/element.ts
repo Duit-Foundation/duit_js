@@ -63,6 +63,7 @@ export type DuitLayoutElement<T = any> =
     | Widgets.SliverAppBarUiElement
     | Widgets.FlexibleSpaceBarUiElement
     | Widgets.SliverListUiElement
+    | Widgets.SliverGridUiElement
     | Widgets.RemoteSubtreeUiElement;
 
 export type DuitElement<T = any> =

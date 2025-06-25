@@ -68,3 +68,4 @@ export { SliverIgnorePointerAttributes } from "./sliver_ignore_pointer_attribute
 export { SliverAppBarAttributes } from "./sliver_app_bar_attributes";
 export { FlexibleSpaceBarAttributes } from "./flexible_space_bar_attributes";
 export { SliverListAttributes } from "./sliver_list_attributes";
+export { SliverGridAttributes } from "./sliver_grid_attributes";

@@ -70,3 +70,4 @@ export * from "./sliver_safe_area.widget";
 export * from "./sliver_app_bar.widget";
 export * from "./flexible_space_bar.widget";
 export * from "./sliver_list.widget";
+export * from "./sliver_grid.widget";

@@ -49,6 +49,22 @@ export type DuitLayoutElement<T = any> =
     | Widgets.AnimatedPaddingUiElement
     | Widgets.AnimatedPositionedUiElement
     | Widgets.AnimatedScaleUiElement
+    | Widgets.CustomScrollViewUiElement
+    | Widgets.SliverPaddingUiElement
+    | Widgets.SliverFillRemainingUiElement
+    | Widgets.SliverToBoxAdapterUIElement
+    | Widgets.SliverFillViewportUIElement
+    | Widgets.SliverOpacityUiElement
+    | Widgets.SliverOffstageUiElement
+    | Widgets.SliverIgnorePointerUiElement
+    | Widgets.SliverVisibilityUiElement
+    | Widgets.SliverAnimatedOpacityUiElement
+    | Widgets.SliverSafeAreaUiElement
+    | Widgets.SliverAppBarUiElement
+    | Widgets.FlexibleSpaceBarUiElement
+    | Widgets.SliverListUiElement
+    | Widgets.SliverGridUiElement
+    | Widgets.RemoteSubtreeUiElement;
     | Widgets.AnimatedSlideUiElement
     | Widgets.RemoteSubtreeUiElement
     | Widgets.AbsorbPointerUiElement

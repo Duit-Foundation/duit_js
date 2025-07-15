@@ -58,3 +58,5 @@ export * from "./text_decoration_style";
 export * from "./button_style";
 export * from "./collapse_mode";
 export * from "./stretch_mode";
+export * from "./overlay_interaction";
+export * from "./offset";

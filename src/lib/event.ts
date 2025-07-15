@@ -1,4 +1,5 @@
-import { AnimationMethod } from "../attributes";
+import { AnimationMethod, BottomSheetCommand, CommandData } from "../attributes";
+import { Text } from "../widgets";
 
 enum ServerEventType {
     update = "update",
@@ -8,8 +9,8 @@ enum ServerEventType {
     custom = "custom",
     sequenced = "sequenced",
     grouped = "grouped",
-    animationTrigger = "animationTrigger",
     timer = "timer",
+    command = "command",
 }
 
 export abstract class ServerEvent {
@@ -96,20 +97,6 @@ class _CustomEvent extends ServerEvent {
     }
 }
 
-class _AnimationTriggerEvent extends ServerEvent {
-    type = ServerEventType.animationTrigger as const;
-    method: AnimationMethod;
-    controllerId: string;
-    animatedPropKey: string;
-
-    constructor(method: AnimationMethod, controllerId: string, animatedPropKey: string) {
-        super();
-        this.method = method;
-        this.controllerId = controllerId;
-        this.animatedPropKey = animatedPropKey;
-    }
-}
-
 class _TimerEvent extends ServerEvent {
     type = ServerEventType.timer as const;
     timerDelay: number; //delay in ms
@@ -119,6 +106,18 @@ class _TimerEvent extends ServerEvent {
         super();
         this.timerDelay = timerDelay;
         this.event = event;
+    }
+}
+
+class _RemoteCommandEvent extends ServerEvent {
+    type = ServerEventType.command as const;
+    controllerId: string;
+    commandData: CommandData;
+
+    constructor(controllerId: string, commandData: CommandData) {
+        super();
+        this.controllerId = controllerId;
+        this.commandData = commandData;
     }
 }
 
@@ -150,10 +149,26 @@ export const CommonEventGroup = (events: ServerEvent[]) => {
     return new _CommonEventGroup(events);
 }
 
-export const AnimationTriggerEvent = (method: AnimationMethod, controllerId: string, animatedPropKey: string) => {
-    return new _AnimationTriggerEvent(method, controllerId, animatedPropKey);
-}
-
 export const TimerEvent = (timerDelay: number, event: ServerEvent) => {
     return new _TimerEvent(timerDelay, event);
 }
+
+/**
+ * @param controllerId - The id of the controller that will execute the command
+ * @param commandData - The data of the command to be executed
+ * 
+ * @example
+ * ```typescript
+ * CommandEvent("controllerId", BottomSheetCommand({
+ *     content: Text({
+ *         attributes: {
+ *             data: "Hello, World!",
+ *         }
+ *     })
+ * }))
+ * ```
+ */
+export const CommandEvent = (controllerId: string, commandData: CommandData) => {
+    return new _RemoteCommandEvent(controllerId, commandData);
+}
+

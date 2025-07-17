@@ -3,6 +3,7 @@ import { DuitElement } from "../../lib/element";
 import { BoxConstraints, OverlayAction, Offset, Color, ShapeBorder, Clip } from "../properties";
 
 export interface BottomSheetCommandProps {
+    type: "bottomSheet",
     isDismissible?: boolean,
     isScrollControlled?: boolean,
     useSafeArea?: boolean,
@@ -17,14 +18,14 @@ export interface BottomSheetCommandProps {
     shape?: ShapeBorder,
     clipBehavior?: keyof typeof Clip,
     onClose?: BaseAction,
-    action?: keyof typeof OverlayAction,
+    action?: OverlayAction,
     content: DuitElement,
 }
 
 export const BottomSheetCommand = ({ ...props }: BottomSheetCommandProps) => {
     return {
-        type: "bottomSheet",
-        action: props.action ?? OverlayAction.open,
+        type: "bottomSheet" as const,
+        action: props.action ?? "open",
         isDismissible: props.isDismissible,
         isScrollControlled: props.isScrollControlled,
         useSafeArea: props.useSafeArea,
@@ -40,5 +41,5 @@ export const BottomSheetCommand = ({ ...props }: BottomSheetCommandProps) => {
         clipBehavior: props.clipBehavior,
         onClose: props.onClose,
         content: props.content,
-    }
+    } as const;
 }

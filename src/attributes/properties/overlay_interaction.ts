@@ -1,4 +1,1 @@
-export enum OverlayAction {
-    open = "open",
-    close = "close",
-}
+export type OverlayAction = "open" | "close";

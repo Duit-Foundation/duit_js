@@ -77,3 +77,4 @@ export * from "./offstage.widget";
 export * from "./animated_cross_fade.widget";
 export * from "./physical_model.widget";
 export * from "./animated_physical_model.widget";
+export * from "./fragment.widget";

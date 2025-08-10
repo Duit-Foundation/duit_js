@@ -15,6 +15,56 @@ router.get("/example_screen", (req, res) => {
     res.send(view);
 });
 
+router.get("/lol", (req, res) => {
+    res.json({
+        "type": "Column",
+        "id": "1",
+        "controlled": false,
+        "children": [
+            {
+                "type": "Fragment",
+                "tag": "f1",
+                "id": "1",
+            },
+            {
+                "type": "Fragment",
+                "tag": "f1",
+                "id": "1",
+            },
+            {
+                "type": "Fragment",
+                "tag": "f1",
+                "id": "1",
+            },
+            {
+                "type": "Fragment",
+                "tag": "f1",
+                "id": "1",
+            },
+            {
+                "type": "Fragment",
+                "tag": "f1",
+                "id": "1",
+            },
+            {
+                "type": "Fragment",
+                "tag": "f1",
+                "id": "1",
+            },
+            {
+                "type": "Fragment",
+                "tag": "f1",
+                "id": "1",
+            },
+            {
+                "type": "Fragment",
+                "tag": "f1",
+                "id": "1",
+            },
+        ],
+    });
+});
+
 app.use(router);
 
 const server = http.createServer(app);

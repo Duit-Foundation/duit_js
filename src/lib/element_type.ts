@@ -80,6 +80,7 @@ enum DuitElementType {
   animatedCrossFade = "AnimatedCrossFade",
   physicalModel = "PhysicalModel",
   animatedPhysicalModel = "AnimatedPhysicalModel",
+  fragment = "Fragment",
 }
 
 export default DuitElementType;

@@ -79,3 +79,4 @@ export * from "./offstage";
 export * from "./animated_cross_fade";
 export * from "./physical_model";
 export * from "./animated_physical_model";
+export * from "./fragment";

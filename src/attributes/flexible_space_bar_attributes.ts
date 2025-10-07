@@ -6,8 +6,6 @@ import type { ThemeConsumer } from "./theme";
 import type { DuitElement } from "../lib/element";
 
 export interface FlexibleSpaceBarAttributes extends ValueReferenceHolder<FlexibleSpaceBarAttributes>, AnimatedPropertyOwner, ThemeConsumer {
-    title?: DuitElement; // Widget
-    background?: DuitElement; // Widget
     titlePadding?: EdgeInsets;
     collapseMode?: keyof typeof CollapseMode;
     stretchModes?: (keyof typeof StretchMode)[];

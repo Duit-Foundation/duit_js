@@ -10,5 +10,4 @@ export interface SliverVisibilityAttributes extends ValueReferenceHolder<SliverV
     maintainState?: boolean;
     maintainSemantics?: boolean;
     maintainInteractivity?: boolean;
-    replacementSliver?: DuitElement;
 }

@@ -8,11 +8,6 @@ import type { DuitElement } from "../lib/element";
 import type { SliverProps } from "./sliver_props";
 
 export interface SliverAppBarAttributes extends ValueReferenceHolder<SliverAppBarAttributes>, AnimatedPropertyOwner, ThemeConsumer, SliverProps {
-    leading?: DuitElement; // Widget
-    title?: DuitElement; // Widget
-    actions?: DuitElement[]; // List<Widget>
-    flexibleSpace?: DuitElement; // Widget
-    bottom?: DuitElement; // PreferredSizeWidget
     shadowColor?: Color;
     backgroundColor?: Color;
     foregroundColor?: Color;

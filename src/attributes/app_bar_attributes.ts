@@ -4,14 +4,8 @@ import type { TextStyle } from "./properties/text_style";
 import type { ValueReferenceHolder } from "./value_reference_holder";
 import type { ThemeConsumer } from "./theme";
 import type { Clip, EdgeInsets, ShapeBorder } from "./properties";
-import type { DuitElement } from "../lib/element";
 
 export interface AppBarAttributes extends ValueReferenceHolder<AppBarAttributes>, AnimatedPropertyOwner, ThemeConsumer {
-    leading?: DuitElement; // Widget
-    title?: DuitElement; // Widget
-    actions?: DuitElement[]; // List<Widget>
-    flexibleSpace?: DuitElement; // Widget
-    bottom?: DuitElement; // PreferredSizeWidget
     shadowColor?: Color;
     backgroundColor?: Color;
     foregroundColor?: Color;

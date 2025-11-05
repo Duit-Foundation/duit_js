@@ -5,6 +5,8 @@ import type { Nullable } from "../utils/nullable";
 import type { ID } from "../utils/id";
 import type { BaseAction } from "../lib/action";
 
+export type ListChild = DuitElement | undefined;
+
 export class DuitLeafElement {
   protected id: ID;
   protected controlled: boolean;
@@ -42,7 +44,7 @@ export class SingleChildLayout extends DuitLeafElement {
 }
 
 export class MultiChildLayout extends DuitLeafElement {
-  children: Nullable<DuitElement[]> = [];
+  children: Nullable<ListChild[]> = [];
 
   constructor(id?: string, action?: Nullable<BaseAction>, controlled?: boolean) {
     super(id, action, controlled);
@@ -54,7 +56,7 @@ export class MultiChildLayout extends DuitLeafElement {
    * @param {T} child - The child element to be added.
    * @return {this} - The current element with the child added.
    */
-  addChild<T extends DuitElement>(child: T): this {
+  addChild<T extends ListChild>(child: T): this {
     this.children?.push(child);
     return this;
   }

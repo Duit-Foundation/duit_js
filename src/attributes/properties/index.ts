@@ -1,4 +1,4 @@
-export * as alignment from "./alignment";
+export * from "./alignment";
 export * from "./axis";
 export * from "./blend_mode";
 export * from "./box_fit";

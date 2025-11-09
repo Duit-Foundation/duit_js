@@ -1,6 +1,6 @@
 import { ComponentUiElement } from "../widget_models";
 import { Builder } from "./builder";
-import { Axis, EdgeInsets, DragStartBehavior, ScrollViewKeyboardDismissBehavior, Clip, MergeStrategy, ScrollPhysics, ListKind } from "./properties";
+import { Axis, EdgeInsets, DragStartBehavior, ScrollViewKeyboardDismissBehavior, Clip, ScrollPhysics, ListKind } from "./properties";
 
 export interface ListView {
     type: ListKind;
